@@ -31,14 +31,18 @@ function switchCamera(){
 }
 
 function draw() {
+  push();
+  translate(width,0);
+  scale(-1, 1);
   image(capture, 0, 0, width, width * capture.height / capture.width);
+  pop();
   let pixel = findColor(capture, colorMatching);
 
   if(pixel !== undefined){
     fill(colorMatching);
     stroke(255);
     strokeWeight(2);
-    circle(pixel.x+8, pixel.y+8, 20);
+    circle(width-(pixel.x+8), pixel.y+8, 20);
     textSize(20);
     fill('black');
     text(ntc.name(rgbToHex(colorMatching)).slice(0,2), 10, 20);
