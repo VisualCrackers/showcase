@@ -12,41 +12,41 @@ p5 `iframe` [shortcodes](https://gohugo.io/content-management/shortcodes/) embed
 
 All parameters are optional but `sketch`. Default values are shown in the above snippet but for `libs*`. Up to `lib5` libs may be specified.
 
-## Color relativity
+## Color Tracking
 
-Look at this [brief explanation](https://p5js.org/examples/color-relativity.html) about what color relativity is.
-
-{{< details title="p5-iframe markdown" open=false >}}
-{{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/colors.js" width="725" height="425" */>}}
-{{< /highlight >}}
-{{< /details >}}
-{{< p5-iframe sketch="/showcase/sketches/colors.js" width="725" height="425" >}}
-
-
-## Third party libraries
-
-Example adapted from [p5.EasyCam](https://github.com/freshfork/p5.EasyCam/blob/master/examples/QuickStart/QuickStart.js).
+Lorem ipsum...
 
 {{< details title="p5-iframe markdown" open=false >}}
 {{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" */>}}
+{{</* p5-iframe sketch="/showcase/sketches/colorTracker.js" width="735" height="525" */>}}
 {{< /highlight >}}
 {{< /details >}}
+{{< p5-iframe sketch="/showcase/sketches/colorTracker.js" width="735" height="525" >}}
 
-{{< p5-iframe sketch="/showcase/sketches/quick_easycam.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="525" height="525" >}}
 
-## Sound
+## Palette Generator
 
-Example took from the [p5 examples](https://p5js.org/examples/sound-sound-effect.html).
+Lorem ipsum...
 
 {{< details title="p5-iframe markdown" open=false >}}
 {{< highlight html >}}
-{{</* p5-iframe sketch="/showcase/sketches/sound.js" width="225" height="225" */>}}
+{{</* p5-iframe sketch="/showcase/sketches/palette.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="735" height="525" */>}}
 {{< /highlight >}}
 {{< /details >}}
 
-{{< p5-iframe sketch="/showcase/sketches/sound.js" width="225" height="225" >}}
+{{< p5-iframe sketch="/showcase/sketches/palette.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="735" height="525" >}}
+
+## Re-coloring
+
+Lorem ipsum...
+
+{{< details title="p5-iframe markdown" open=false >}}
+{{< highlight html >}}
+{{</* p5-iframe sketch="/showcase/sketches/recoloring.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="735" height="525" */>}}
+{{< /highlight >}}
+{{< /details >}}
+
+{{< p5-iframe sketch="/showcase/sketches/recoloring.js" lib1="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js" width="735" height="525" >}}
 
 # p5-global-iframe
 

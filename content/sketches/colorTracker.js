@@ -8,18 +8,38 @@ var ntc={init:function(){for(var e,a,F,r=0;r<ntc.names.length;r++)e="#"+ntc.name
 let capture, colorMatching;
 let tolerance = 5;
 let user = false;
+let sliderR, sliderG, sliderB;
+let showColor;
 
 function setup() {
-  createCanvas(700, 400);
+  createCanvas(715, 500);
   switchCamera();
-  colorMatching = color(0,0,255);
+  colorMatching = color(255,255,255);
   switchBtn = createButton('Switch Camera');
   switchBtn.position(600, 380);
   switchBtn.mousePressed(switchCamera);
+  sliderR = createSlider(0, 255, 0);
+  sliderR.input(sliderChanged);
+  sliderR.position(40, 420);
+  fill('red');
+  text('R', 10, 425);
+  sliderG = createSlider(0, 255, 0);
+  sliderG.input(sliderChanged);
+  sliderG.position(40, 440);
+  fill('green');
+  text('G', 10, 445);
+  sliderB = createSlider(0, 255, 0);
+  sliderB.input(sliderChanged);
+  sliderB.position(40, 460);
+  fill('blue');
+  text('B', 10, 465);
+}
+
+function sliderChanged(){
+  colorMatching = color(sliderR.value(), sliderG.value(), sliderB.value()).levels;
 }
 
 function switchCamera(){
-  //console.log("Holaaaa");
   if(user){
     capture = createCapture({audio: false, video: {facingMode: {exact: "environment"}}});
   }else{
@@ -33,8 +53,7 @@ function switchCamera(){
 function draw() {
   image(capture, 0, 0, width, width * capture.height / capture.width);
   let pixel = findColor(capture, colorMatching);
-
-  if(pixel !== undefined){
+  if(pixel !== undefined && pixel.y<height-120){
     fill(colorMatching);
     stroke(255);
     strokeWeight(2);
@@ -44,11 +63,13 @@ function draw() {
     text(ntc.name(rgbToHex(colorMatching)).slice(0,2), 10, 20);
     text(rgbToHex(colorMatching).toUpperCase(), 10, 40);
   }
+  fill(colorMatching);
+  showColor = square(180, 415, 60);
 }
 
 function componentToHex(c) {
-  var hex = c.toString(16);
-  return hex.length == 1 ? "0" + hex : hex;
+  let hex = c.toString(16);
+  return hex.length === 1 ? "0" + hex : hex;
 }
 
 function rgbToHex(color) {
@@ -56,9 +77,13 @@ function rgbToHex(color) {
 }
 
 function mousePressed(){
-  loadPixels();
-  colorMatching = get(mouseX, mouseY);
-  console.log(mouseX, mouseY);
+  if(mouseX > 0 && mouseX < capture.width && mouseY > 0 && mouseY < capture.height){
+    loadPixels();
+    colorMatching = get(mouseX, mouseY);
+    sliderR.value(colorMatching[0]);
+    sliderG.value(colorMatching[1]);
+    sliderB.value(colorMatching[2]);
+  }
 }
 
 function findColor(input, color){
