@@ -8,7 +8,8 @@ let images = [
     'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/2560px-Flag_of_Canada_%28Pantone%29.svg.png',
     'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Escudo_de_la_Universidad_Nacional_de_Colombia_%282016%29.svg/1200px-Escudo_de_la_Universidad_Nacional_de_Colombia_%282016%29.svg.png',
     'https://historiadelavida.editorialaces.com/wp-content/uploads/2019/02/De-donde-viene-el-arcoiris-PORTADA.png',
-    'https://www.autobild.es/sites/autobild.es/public/styles/main_element/public/dc/fotos/Nissan-GT-R-2017-C01.jpg?itok=EOlR4pLx',
+    'https://images7.alphacoders.com/532/532603.jpg',
+    'https://elturismoencolombia.com/wp-content/uploads/2021/12/bandera-colombia-turismo.jpg',
 ];
 
 function preload() {
