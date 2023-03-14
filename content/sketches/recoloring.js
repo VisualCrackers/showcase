@@ -8,12 +8,15 @@ let images = [
     'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/2560px-Flag_of_Canada_%28Pantone%29.svg.png',
     'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Escudo_de_la_Universidad_Nacional_de_Colombia_%282016%29.svg/1200px-Escudo_de_la_Universidad_Nacional_de_Colombia_%282016%29.svg.png',
     'https://historiadelavida.editorialaces.com/wp-content/uploads/2019/02/De-donde-viene-el-arcoiris-PORTADA.png',
-    'https://www.autobild.es/sites/autobild.es/public/styles/main_element/public/dc/fotos/Nissan-GT-R-2017-C01.jpg?itok=EOlR4pLx',
+    'https://images7.alphacoders.com/532/532603.jpg',
+    'https://elturismoencolombia.com/wp-content/uploads/2021/12/bandera-colombia-turismo.jpg',
+    'https://www.colorlitelens.com/images/Ishihara/Ishihara_01.jpg',
+    'https://www.colorlitelens.com/images/Ishihara/Ishihara_04.jpg'
 ];
 
 function preload() {
   let index = floor(random(images.length));
-  img = loadImage(images[0]);
+  img = loadImage(images[index]);
 }
 
 function setup() {
@@ -22,14 +25,22 @@ function setup() {
    '#e9c46a', '#f4a261',
    '#e76f51'
   ];
+
+  palette1 = ['#648FFF', '#785EF0', '#DC267F', '#FE6100', '#FFB000'];
+
+  palette2 = ['#000000', '#E69F00', '#56B4E9', '#009E73', '#F0E442',
+                '#0072B2', '#D55E00', '#CC79A7'];
+
+  palette3 = ['#332288', '#117733', '#44AA99', '#88CCEE', '#DDCC77',
+                '#CC6677', '#AA4499', '#882255'];
+
   img.resize(width, height);
   image(img, 0, 0);
 }
 
 
-//Function draw in p5.js
+//Function draw in testing.js
 function draw() {
-    console.log("Hellooo");
     for(let x = 0; x < width; x++) {
         let imgColor = img.get(x, y);
         let paletteColor = getPaletteColor(imgColor);
