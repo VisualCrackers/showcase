@@ -16,7 +16,7 @@ weight: 4
 Este código es una aplicación que cambia la paleta de colores de una imagen y muestra la imagen transformada.
 El usuario puede elegir entre seis paletas de colores diferentes para transformar la imagen.
 
-![Re Coloring Showcase](../../../../../static/Ishihara/74IBM.png "Re Coloring")
+<img alt="Re Coloring Showcase" src="https://i.ibb.co/6R9R4MG/74IBM.png" title="Re Coloring" width="500"/>
 {{< /tab >}}
 
 {{< tab "Palette Generator" >}}
@@ -24,7 +24,7 @@ El usuario puede elegir entre seis paletas de colores diferentes para transforma
 Este script es una implementación en p5.js de un algoritmo que extrae los colores predominantes de una imagen 
 y muestra una paleta de colores correspondiente en la parte inferior de la imagen.
 
-![Palette Generator Showcase](../../../../sketches/PaletteGeneratorShowcase.png "Palette Generator")
+<img alt="Palette Generator Showcase" src="https://i.ibb.co/8j9mxFt/Palette-Showcase.png" title="Palette Generator" width="500"/>
 {{< /tab >}}
 
 {{< tab "Color Tracker" >}}
@@ -33,7 +33,7 @@ El código es una aplicación web que utiliza la cámara del dispositivo para ca
 en tiempo real. Permite al usuario ajustar los valores de color para buscar un tono específico y muestra 
 información sobre el nombre, código hexadecimal y tono del color seleccionado.
 
-![Color Tracker Showcase](../../../../../static/ColorTrackerShowcase.png "Color Tracker")
+<img alt="Color Tracker Showcase" src="https://i.ibb.co/yywpGFJ/Color-Tracker-Showcase.png" title="Color Tracker" width="500"/>
 {{< /tab >}}
 
 {{< /tabs >}}
