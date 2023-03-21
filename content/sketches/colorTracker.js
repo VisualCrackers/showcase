@@ -62,18 +62,46 @@ function draw() {
     fill('black');
     text(ntc.name(rgbToHex(colorMatching)).slice(0,2), 10, 20);
     text(rgbToHex(colorMatching).toUpperCase(), 10, 40);
+    text(hueColor(colorMatching), 10, 60);
   }
   fill(colorMatching);
   showColor = square(180, 415, 60);
 }
 
-function componentToHex(c) {
-  let hex = c.toString(16);
+function componentToHex(color) {
+  let hex = color.toString(16);
   return hex.length === 1 ? "0" + hex : hex;
 }
 
 function rgbToHex(color) {
   return "#" + componentToHex(color[0]) + componentToHex(color[1]) + componentToHex(color[2]);
+}
+
+function hueColor(color) {
+
+  if(brightness(color) > 95) return "White";
+  if(brightness(color) < 10 || (brightness(color)<=15 && saturation(color)<=15)) return "Black";
+  if(saturation(color) < 16){
+    if(brightness(color) <= 40) return "Dark Gray";
+    if(brightness(color) <= 70) return "Gray";
+    if(brightness(color) <= 80) return "Silver";
+    if(brightness(color) <= 95) return "Light Gray";
+    return "Gray";
+  }
+  color = hue(color)
+  if(color >= 0 && color < 16)    return "Red";
+  if(color >= 16 && color < 41)   return "Orange";
+  if(color >= 41 && color < 46)   return "Gold";
+  if(color >= 46 && color < 61)   return "Yellow";
+  if(color >= 61 && color < 91)  return "Yellow - Green";
+  if(color >= 91 && color < 136) return "Green";
+  if(color >= 136 && color < 161) return "Spring Green";
+  if(color >= 161 && color < 201) return "Cyan";
+  if(color >= 201 && color < 256) return "Blue";
+  if(color >= 256 && color < 301) return "Purple";
+  if(color >= 301 && color < 346) return "Pink";
+  if(color >= 346)                return "Red";
+
 }
 
 function mousePressed(){
