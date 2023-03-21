@@ -71,63 +71,64 @@ no se garantiza que la persona pueda distinguir los colores de la imágen.
 {{< /hint >}}
 
 {{< hint info >}}
-## Muestras
+# Muestras
 {{< /hint >}}
 
 ## Ishihara Test 7
+---
 
 {{< columns >}}
 ## Vista sin alteraciones
-![Ishihara original](../../../../sketches/Ishihara/74Original.png "Ishihara original")
+![Ishihara original](https://i.ibb.co/xhkcw5v/74-Original.png "Ishihara original")
 
 <--->
 
 ## Vista con Protanopia
-![Ishihara protanopia](../../../../sketches/Ishihara/74Protanopia.png "Ishihara protanopia")
+![Ishihara protanopia](https://i.ibb.co/Cm162h0/74-Protanopia.png "Ishihara protanopia")
 
 {{< /columns >}}
 
 {{< columns >}}
-## Paleta x
-![Ishihara paleta x](../../../../sketches/Ishihara/74IBM.png "Ishihara con paleta x")
+## Paleta IBM
+![Ishihara paleta x](https://i.ibb.co/6R9R4MG/74IBM.png "Ishihara con paleta IBM")
 
 <--->
 
-## Paleta y
+## Paleta #2
 
-![Ishihara paleta y](../../../../sketches/Ishihara/74Paleta2.png "Ishihara con paleta y")
+![Ishihara paleta y](https://i.ibb.co/gJT7t5w/74-Paleta2.png "Ishihara con paleta #2")
 
 {{< /columns >}}
-
----
 
 ## Ishihara Test 4
 
+---
+
 {{< columns >}}
 ## Vista sin alteraciones
-![Ishihara original](../../../../sketches/Ishihara/5Original.png "Ishihara original")
+![Ishihara original](https://i.ibb.co/3TKJ5fQ/5-Original.png "Ishihara original")
 
 <--->
 
 ## Vista con Protanopia
-![Ishihara protanopia](../../../../sketches/Ishihara/5Protanopia.png "Ishihara protanopia")
+![Ishihara protanopia](https://i.ibb.co/SmKjtsH/5-Protanopia.png "Ishihara protanopia")
 
 {{< /columns >}}
 
 {{< columns >}}
-## Paleta x
-![Ishihara paleta x](../../../../sketches/Ishihara/5IBM.png "Ishihara con paleta x")
+## Paleta IBM
+![Ishihara paleta x](https://i.ibb.co/7ttF5zP/5IBM.png "Ishihara con paleta IBM")
 
 <--->
 
-## Paleta y
+## Paleta #3
 
-![Ishihara paleta y](../../../../sketches/Ishihara/5Paleta2.png "Ishihara con paleta y")
+![Ishihara paleta y](https://i.ibb.co/F5Sv2fj/5Paleta3.png "Ishihara con paleta #3")
 
 <--->
 
-## Paleta z
+## Paleta #2
 
-![Ishihara paleta z](../../../../sketches/Ishihara/5Paleta2.png "Ishihara con paleta z")
+![Ishihara paleta z](https://i.ibb.co/64ThknP/5Paleta2.png "Ishihara con paleta #2")
 
 {{< /columns >}}
