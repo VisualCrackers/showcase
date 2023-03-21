@@ -1,5 +1,5 @@
 baseURL = "https://visualcrackers.github.io/showcase"
-languageCode = "en-us"
+languageCode = "es-es"
 title = "Visual Computing"
 theme = 'book'
 

@@ -2,6 +2,7 @@ let img;
 let colors = [];
 let canvasSize = 700;
 let paletteHeight = 30;
+let tolerance = 25;
 
 let images = [
     'https://llandscapes-10674.kxcdn.com/wp-content/uploads/2019/07/lighting.jpg',
@@ -10,6 +11,7 @@ let images = [
     'https://historiadelavida.editorialaces.com/wp-content/uploads/2019/02/De-donde-viene-el-arcoiris-PORTADA.png',
     'https://images7.alphacoders.com/532/532603.jpg',
     'https://elturismoencolombia.com/wp-content/uploads/2021/12/bandera-colombia-turismo.jpg',
+    'https://www.portafolio.co/files/article_multimedia/uploads/2022/11/29/6386773e8cfe9.jpeg'
 ];
 
 function preload() {
@@ -20,11 +22,12 @@ function preload() {
 function setup() {
   let canvasHeight = round(img.height*canvasSize/img.width)+paletteHeight+5;
   createCanvas(canvasSize, canvasHeight);
-  image(img, 0, 0, canvasSize, canvasHeight-paletteHeight-5);
+  image(img,  0, 0, canvasSize, canvasHeight-paletteHeight-5);
   extractColors();
   colors = colors.sort((b, a) => a[1] - b[1]);
   colors = colors.slice(0,7);
   colors = colors.sort((b, a) => colorNumber(a[0]) - colorNumber(b[0]));
+  console.log(colors);
   showPalette();
 }
 function extractColors() {
@@ -36,7 +39,7 @@ function extractColors() {
       let found = false;
       for (let i = 0; i < colors.length; i++) {
         let existingColor = colors[i][0];
-        if (colorDistance(existingColor, c) < 25) { // tolerance range
+        if (colorDistance(existingColor, c) < tolerance) { // tolerance range
           found = true;
           colors[i][1]++;
           break;

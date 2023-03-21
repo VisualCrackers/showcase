@@ -1,13 +1,133 @@
 ---
-weight: 1
+weight: 3
 ---
+{{< hint info >}}
+# Re-Coloring
+{{< /hint >}}
 
-Re-coloring
+La posibilidad de cambiar los colores de una figura es una de las características más interesantes de la 
+computación gráfica, ya que permite realizar transformaciones de una imagen de una manera sencilla y rápida. 
+En este caso, se ha utilizado la librería **p5.js** para efectuar la transformación de colores de una imágen a
+partir del cambio de la paleta que está utilizando.
 
-{{< details title="p5-iframe markdown" open=false >}}
-{{< highlight html >}}
-{{< p5-iframe sketch="/showcase/sketches/recoloring.js" width="735" height="525" >}}
+A través del uso de distintas paletas de colores se pueden obtener efectos en la imágen que pueden ser
+implementados para ayudar a las personas con daltonismo; por ejemplo, se puede cambiar la paleta de colores
+de una imágen para que sea más fácil de distinguir para una persona con problemas visuales.
+
+{{< hint >}}
+Existen ciertas paletas de colores que son más adecuadas para personas con daltonismo, como la paleta de
+colores [**IBM**](https://lospec.com/palette-list/ibm-color-blind-safe),
+[**Wong**](https://www.color-hex.com/color-palette/1018347), o [**Tol**](https://personal.sron.nl/~pault/).
+{{< /hint >}}
+
+{{< hint warning >}}
+Para mayor información acerca de las paletas de colores para personas con daltonismo, se puede consultar el
+siguiente [artículo](https://davidmathlogic.com/colorblind/) por [David Nichols](https://davidmathlogic.com/).
+{{< /hint >}}
+
+{{< hint info >}}
+## ¿Cómo funciona?
+{{< /hint >}}
+
+El script se basa en la extracción de los colores que aparecen en una imágen, y a partir de la paleta seleccionada
+por el usuario, se procede a cambiar los de la imágen original. El punto fundamental del código es encontrar
+la distancia entre los colores de la paleta y los de la imágen, y a partir de ahí, se selecciona el más cercano
+para realizar el reemplazo.
+
+Este código se muestra a continuación:
+
+{{< details title="getPaletteColor" open=true >}}
+{{< highlight js >}}
+function getPaletteColor(imgColor) {
+    let r = red(imgColor);
+    let g = green(imgColor);
+    let b = blue(imgColor);
+    let minDist = Infinity;
+    let color;
+    for(let i = 0; i < currentPalette.length; i++) {
+        let pColor = currentPalette[i];
+        let d = dist(r, g, b, red(pColor), green(pColor), blue(pColor));
+        if(d < minDist) {
+            minDist = d;
+            color = currentPalette[i];
+        }
+    }
+    return color;
+}
 {{< /highlight >}}
 {{< /details >}}
 
+{{< hint info >}}
+Es importante destacar que las paletas con las que se cuentan no representan una solución para todos los casos,
+ya que no todas las personas con daltonismo tienen los mismos problemas y depende en gran parte de los colores
+que se tengan en la figura original.
+{{< /hint >}}
+
 {{< p5-iframe sketch="/showcase/sketches/recoloring.js" width="735" height="525" >}}
+
+{{< hint danger >}}
+Aunque se puede utilizar una paleta de colores para personas con daltonismo, 
+no se garantiza que la persona pueda distinguir los colores de la imágen.
+{{< /hint >}}
+
+{{< hint info >}}
+## Muestras
+{{< /hint >}}
+
+## Ishihara Test 7
+
+{{< columns >}}
+## Vista sin alteraciones
+![Ishihara original](../../../../sketches/Ishihara/74Original.png "Ishihara original")
+
+<--->
+
+## Vista con Protanopia
+![Ishihara protanopia](../../../../sketches/Ishihara/74Protanopia.png "Ishihara protanopia")
+
+{{< /columns >}}
+
+{{< columns >}}
+## Paleta x
+![Ishihara paleta x](../../../../sketches/Ishihara/74IBM.png "Ishihara con paleta x")
+
+<--->
+
+## Paleta y
+
+![Ishihara paleta y](../../../../sketches/Ishihara/74Paleta2.png "Ishihara con paleta y")
+
+{{< /columns >}}
+
+---
+
+## Ishihara Test 4
+
+{{< columns >}}
+## Vista sin alteraciones
+![Ishihara original](../../../../sketches/Ishihara/5Original.png "Ishihara original")
+
+<--->
+
+## Vista con Protanopia
+![Ishihara protanopia](../../../../sketches/Ishihara/5Protanopia.png "Ishihara protanopia")
+
+{{< /columns >}}
+
+{{< columns >}}
+## Paleta x
+![Ishihara paleta x](../../../../sketches/Ishihara/5IBM.png "Ishihara con paleta x")
+
+<--->
+
+## Paleta y
+
+![Ishihara paleta y](../../../../sketches/Ishihara/5Paleta2.png "Ishihara con paleta y")
+
+<--->
+
+## Paleta z
+
+![Ishihara paleta z](../../../../sketches/Ishihara/5Paleta2.png "Ishihara con paleta z")
+
+{{< /columns >}}

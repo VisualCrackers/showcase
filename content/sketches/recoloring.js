@@ -1,17 +1,17 @@
 let img;
-let palette = [];
+let currentPalette = [];
 let y = 0;
 let canvasSize = 700;
 
 let images = [
     'https://llandscapes-10674.kxcdn.com/wp-content/uploads/2019/07/lighting.jpg',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/2560px-Flag_of_Canada_%28Pantone%29.svg.png',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Escudo_de_la_Universidad_Nacional_de_Colombia_%282016%29.svg/1200px-Escudo_de_la_Universidad_Nacional_de_Colombia_%282016%29.svg.png',
-    'https://historiadelavida.editorialaces.com/wp-content/uploads/2019/02/De-donde-viene-el-arcoiris-PORTADA.png',
-    'https://images7.alphacoders.com/532/532603.jpg',
-    'https://elturismoencolombia.com/wp-content/uploads/2021/12/bandera-colombia-turismo.jpg',
     'https://www.colorlitelens.com/images/Ishihara/Ishihara_01.jpg',
-    'https://www.colorlitelens.com/images/Ishihara/Ishihara_04.jpg'
+    'https://www.colorlitelens.com/images/Ishihara/Ishihara_02.jpg',
+    'https://www.colorlitelens.com/images/Ishihara/Ishihara_03.jpg',
+    'https://www.colorlitelens.com/images/Ishihara/Ishihara_05.jpg',
+    'https://www.colorlitelens.com/images/Ishihara/Ishihara_06.jpg',
+    'https://www.colorlitelens.com/images/Ishihara/Ishihara_08.jpg',
+    'https://www.colorlitelens.com/images/Ishihara/Ishihara_10.jpg',
 ];
 
 function preload() {
@@ -21,25 +21,51 @@ function preload() {
 
 function setup() {
   createCanvas(canvasSize, round(img.height*canvasSize/img.width));
-  palette = ['#264653', '#2a9d8f',
-   '#e9c46a', '#f4a261',
-   '#e76f51'
-  ];
 
-  palette1 = ['#648FFF', '#785EF0', '#DC267F', '#FE6100', '#FFB000'];
+  ibm = ['#648FFF', '#785EF0', '#DC267F', '#FE6100', '#FFB000'];
 
-  palette2 = ['#000000', '#E69F00', '#56B4E9', '#009E73', '#F0E442',
+  wong = ['#000000', '#E69F00', '#56B4E9', '#009E73', '#F0E442',
                 '#0072B2', '#D55E00', '#CC79A7'];
 
-  palette3 = ['#332288', '#117733', '#44AA99', '#88CCEE', '#DDCC77',
+  tol = ['#332288', '#117733', '#44AA99', '#88CCEE', '#DDCC77',
                 '#CC6677', '#AA4499', '#882255'];
+
+  palette1 = ['#264653', '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51'];
+
+  palette2 = ["#FFFFFF", "#000000", "#FFC0CB", "#008000", "#FFD700"];
+
+  palette3 = ['#F5793A', '#A95AA1', '#85C0F9', '#0F2080', '#FDFC33'];
+
+  currentPalette = ibm;
+
+  paletteSel = createSelect();
+  paletteSel.position(10, 10);
+  paletteSel.option('Paleta IBM');
+  paletteSel.option('Paleta Wong');
+  paletteSel.option('Paleta Tol');
+  paletteSel.option('Paleta 1');
+  paletteSel.option('Paleta 2');
+  paletteSel.option('Paleta 3');
+  paletteSel.changed(changePalette);
 
   img.resize(width, height);
   image(img, 0, 0);
 }
 
+function changePalette() {
+    let selected = paletteSel.value();
+    if(selected === 'Paleta 1') currentPalette = palette1;
+    else if(selected === 'Paleta 2') currentPalette = palette2;
+    else if(selected === 'Paleta 3') currentPalette = palette3;
+    else if(selected === 'Paleta IBM') currentPalette = ibm;
+    else if(selected === 'Paleta Wong') currentPalette = wong;
+    else if(selected === 'Paleta Tol') currentPalette = tol;
+    y = 0;
+    loop();
+    image(img, 0, 0);
+    redraw();
+}
 
-//Function draw in testing.js
 function draw() {
     for(let x = 0; x < width; x++) {
         let imgColor = img.get(x, y);
@@ -47,7 +73,7 @@ function draw() {
         stroke(paletteColor);
         point(x, y);
     }
-    y++;
+    y+=2;
     if(y>=height) noLoop();
 
 }
@@ -58,12 +84,12 @@ function getPaletteColor(imgColor) {
     let b = blue(imgColor);
     let minDist = Infinity;
     let color;
-    for(let i = 0; i < palette.length; i++) {
-        let pColor = palette[i];
+    for(let i = 0; i < currentPalette.length; i++) {
+        let pColor = currentPalette[i];
         let d = dist(r, g, b, red(pColor), green(pColor), blue(pColor));
         if(d < minDist) {
             minDist = d;
-            color = palette[i];
+            color = currentPalette[i];
         }
     }
     return color;
