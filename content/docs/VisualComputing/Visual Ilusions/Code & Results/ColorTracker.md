@@ -1,47 +1,29 @@
 ---
 weight: 2
 ---
-{{< hint info >}}
-# Color tracker
-{{< /hint >}}
 
-La capacidad reducida de distinguir entre ciertos colores debido a un defecto genético como lo es
-el [***daltonismo***](https://es.wikipedia.org/wiki/Daltonismo), hace que el color sea una variable importante a la hora de realizar cualquier diseño;
-es por ello que es importante intentar reducir los inconvenientes que esto puede ocasionar. 
-Adicionalmente, esta percepción  distinta o nula sobre los colores no solo es una afección a como 
-se ven las cosas, sino que también afecta en la capacidad de *obtener información del entorno*.
+# **Color tracker**
 
-Enfrentarse al daltonismo es un reto que no es fácil de asumir, en especial cuando se realiza un primer acercamiento
-ya que no se tiene una idea clara de como se ve el mundo de una persona daltonica. Sin embargo, son las personas con
-esta discapacidad las que usualmente tienen que acomodarse a los demás, y las confusiones entre colores pueden generar
-una gran frustración.
+The reduced ability to distinguish between certain colors due to a genetic defect such as [***color blindness***](https://en.wikipedia.org/wiki/Color_blindness), makes color an important variable when making any design; that is why it is important to try to reduce the inconveniences that this can cause. Additionally, this different or null perception of colors is not only a condition like things are seen, but it also affects the ability to *get information from the environment*.
 
----
-{{< hint info >}}
-## ¿Y que se puede hacer?
-{{< /hint >}}
+Facing color blindness is a challenge that is not easy to assume, especially when a first approach is made since you do not have a clear idea of what the world of a colorblind person looks like. However, it is the people with this disability who usually have to accommodate to others and the confusion between colors can generate great frustration.
 
-En busca de una alternativa para reducir los inconvenientes que esto puede ocasionar, se realizó un script en P5.js que
-permite realizar un *seguimiento de los colores* que se encuentran en la pantalla, y a su vez los *identifica* de manera automática
-en los nombres de los colores que han sido establecidos en el sistema.
+## What can be done?
 
-{{< hint info >}}
-### ¿Cómo funciona?
-{{< /hint >}}
+In search of an alternative to reduce the inconveniences that this can cause, a script was created in P5.js that allows *monitoring of the colors* found on the screen, and in turn *identifies* them automatically in the names of the colors that have been established in the system.
+
+### How does it work?
 
 {{< hint >}}
-Para realizar el match del color que el usuario desea, puede hacerlo de dos maneras:
-1. Dando click sobre el color que desea identificar que se encuentra en el video actual.
-2. Ingresando la cantidad de rojo, verde y azul (Codigo RGB) que desea identificar en el video actual.
+To match the color that the user wants, you can do it in two ways:
+1. Clicking on the color that you want to identify that is in the current video.
+2. Entering the amount of red, green and blue (RGB Code) you want to identify in the current video.
 {{< /hint >}}
 
-Una vez que se ha seleccionado el color, se muestra el nombre del color que más se asemeja entre los existentes de la lista
-proporcionada por [**Name That Color**](https://chir.ag/projects/name-that-color/) y, adicionalmente, se realiza el seguimiento del pixel más cercano al origen que concuerde
-con dicho color.
+Once the color has been selected, the name of the color that most closely matches the existing ones in the list is displayed provided by the library [**Name That Color**](https://chir.ag/projects/name-that-color/) and, additionally, the closest pixel to the origin that matches that color is tracked.
 
-{{< hint warning >}}
-El script a continuación detalla como se recorre la matriz de pixeles del video actual en búsqueda de la primera instancia
-que sea similar contando con un margen de tolerancia.
+{{< hint info >}}
+The script below details how the pixel matrix of the current video is traversed in search of the first instance that is similar, given a tolerance margin.
 {{< /hint >}}
 
 {{< details title="findColor" open=true >}}
@@ -71,12 +53,10 @@ function findColor(input, color){
 {{< /highlight >}}
 {{< /details >}}
 
-Una vez encontrado el color, este se resalta en el video a la vez que se muestra el codigo hexadecimal del color
-mas cercano encontrado con la libreria [*ntc*](https://chir.ag/projects/ntc/) y su respectivo nombre. En un nivel inferior se muestra el codigo del color
-que fue seleccionado a buscar, el cual no debe ser muy distante del ya encontrado.
+Once the color is found, it is highlighted in the video and the screen shows the hexadecimal code of the closest color found with the [*ntc*](https://chir.ag/projects/ntc/) library and its respective name. At a lower level, the color code that was selected to search is shown, which should not be too far from the one already found.
 
 {{< hint warning >}}
-Para realizar las conversiones y determinaciones de códigos se utilizaron las siguientes funciones:
+The following functions are used to perform conversions and code determinations:
 {{< /hint >}}
 
 ``` js
@@ -90,28 +70,25 @@ function rgbToHex(color) {
 }
 ```
 
-Por ultimo, se decidió realizar también la etiqueta de color en un espectro mucho más reducido, pero que permite
-una identificación más general de los colores; la implementación de esta utilidad se realizo a partir del codigo de color HSL.
-Para la mejor visualización del color con el que se está trabajando,
-existe un cuadro en la parte inferior que se rellena con el color del matching.
+Finally, it was decided to also carry out the color label in a much smaller spectrum, which allows a more general identification of the colors. The implementation of this utility was made from the HSL color code. For the best visualization of the color you are working with, there is a box at the bottom that is filled with the matching color.
+
+## Result
 
 {{< hint >}}
-El resultado final es el siguiente Sketch que permite realizar un ColorTracking en tiempo real a través de la cámara.
+The final result is the following Sketch that allows real-time ColorTracking through the camera.
 {{< /hint >}}
 
 {{< p5-iframe sketch="/showcase/sketches/colorTracker.js" width="735" height="525" >}}
 
 {{< hint info>}}
-**Colores**
+**Colors**
 
-La libreria de opensource [**Name That Color**](https://chir.ag/projects/ntc/) proporciona una lista de colores
-que incluye más de 1500 nombres de colores, con sus respectivos códigos RGB y Hexadecimales.
-También, contiene inmerso el código que calcula el color más cercano al color dado.
+The opensource library [**Name That Color**](https://chir.ag/projects/ntc/) provides a list of colors that includes more than 1500 color names, with their respective RGB and Hexadecimal codes. Also, it contains embedded the code that calculates the closest color to the given color.
+
 {{< /hint>}}
 
 {{< hint danger>}}
-**ColorTracker**
+**Color Tracker**
 
-El seguimiento e identificación de los colores que sean seleccionados se verá bastante afectado por la iluminación del ambiente,
-al igual que la calidad de la cámara.
+The tracking and identification of the colors that are selected will be greatly affected by the lighting in the environment or the quality of the camera.
 {{< /hint>}}
