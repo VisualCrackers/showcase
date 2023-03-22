@@ -1,8 +1,3 @@
----
-title: Visual Crackers
-type: docs
----
-
 # **Visual Crackers Showcase**
 
 
