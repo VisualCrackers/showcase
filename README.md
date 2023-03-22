@@ -1,9 +1,7 @@
 # **Visual Crackers Showcase**
 
 
-{{< hint info >}}
 Welcome to the [Visual Crackers](https://github.com/VisualCrackers) team showcase.
-{{< /hint >}}
 
 ## What is this showcase?
 
