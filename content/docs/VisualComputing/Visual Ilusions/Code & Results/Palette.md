@@ -1,37 +1,23 @@
 ---
 weight: 1
 ---
-{{< hint info >}}
-# Palette Generator
-{{< /hint >}}
 
-A la hora de crear cualquier tipo de software, diseño, o herramienta, es importante considerar que no todos los 
-usuarios tienen la misma capacidad de percepción. Los colores son variables que realmente afectan sobre la interacción
-de los consumidores con el producto, por lo que realizar una *selección de la paleta apropiada* es una tarea que debe
-contemplarse debidamente, y aún más cuando se procura que el producto sea **accesible** para todos.
+# **Palette Generator**
+
+When creating any type of software, design, or tool, it is important to consider that not all users have the same perception capacity. The colors are variables that really affect the interaction of consumers with the product, so making a *selection of the appropriate palette* is a task that must be properly contemplated, and even more so when trying to make the product **accessible** to everyone.
 
 {{< hint >}}
-Obtener la paleta de colores que aparecen con más frecuencia de una imágen va a permitir que el diseñador pueda
-evidenciar si los colores que ha seleccionado son los más adecuados para el producto, o si por el contrario, es necesario
-realizar un cambio en la misma. También, a través de un generador de paletas de colores, se pueden investigar sobre
-*combinaciones que son menos propensas a causar problemas de confusión* de colores para las personas con ***daltonismo***.
+Obtaining the palette of colors that appear most frequently in an image will allow the designer to show if the colors he has selected are the most suitable for the product, or if, on the contrary, it is necessary make a change to it. Also, through a color palette generator, you can investigate about *color combinations that are less likely to cause confusion* problems for people with **color blindness**.
 {{< /hint >}}
+
+## How does it work?
+
+The script is based on extracting the colors that appear in an image, and obtaining the frequency from each of them. For this, the **`loadPixels()`** method of the P5.js library has been used, which allows obtaining the information of each one of the pixels of the image, and thus be able to count the colors when going through the graphic piece. The information of each color is saved in an arrangement, and the frequency with which it appears in the image, also taking into account a tolerance so as not to make the data structure excessively large.
+
+Once the information on the colors has been obtained, they are ordered from highest to lowest frequency, taking the first 7 colors of this list, and showing them at the bottom of the canvas.
 
 {{< hint info >}}
-## ¿Cómo funciona?
-{{< /hint >}}
-
-El script se basa en la extracción de los colores que aparecen en una imágen, y la obtención de la frecuencia
-de cada uno de ellos. Para ello, se ha utilizado el método **`loadPixels()`** de la librería P5.js, que permite obtener la 
-información de cada uno de los pixeles de la imágen, y así poder realizar el conteo de los colores al recorrer la
-pieza gráfica. Se guarda en un arreglo la información de cada color, y la frecuencia con la que aparece en la imágen,
-teniendo en cuenta también una tolerancia para no hacer excesivamente grande la estructura de datos.
-
-Una vez que se ha obtenido la información de los colores, se procede a ordenarlos de mayor a menor frecuencia,
-tomando los primeros 7 colores de esta la lista, y mostrándolos en la parte inferior del canvas.
-
-{{< hint warning >}}
-El código para la extracción de los colores se muestra a continuación:
+The code for extracting the colors is shown below:
 {{< /hint >}}
 
 {{< details title="extractColors" open=true >}}
@@ -60,10 +46,10 @@ function extractColors() {
 {{< /highlight >}}
 {{< /details >}}
 
-{{< hint info >}}
-Para ordenar la paleta de colores en la parte inferior del canvas se ha utilizado el método **`colorNumber(color)`** 
-que permite realizar una conversión del código RGB a un valor numérico, y así poder colocarlos en un orden agradable 
-armonicamente para la vista.
+{{< hint >}}
+To order the color palette at the bottom of the canvas, the **`colorNumber(color)`** method has been used
+that allows you to perform a conversion of the RGB code to a numeric value, and thus be able to place them in a nice order
+harmonically to the eye.
 {{< /hint >}}
 
 ```js
@@ -72,27 +58,24 @@ function colorNumber(c) {
 }
 ```
 
-{{< hint info >}}
-Para obtener la distancia entre dos colores se ha utilizado la fórmula de la distancia euclidiana, que permite
-obtener la distancia entre dos puntos en un espacio de n dimensiones. En este caso, se ha utilizado para obtener
-la distancia entre dos colores en el espacio RGB en la función **`colorDistance(c1, c2)`**.
+{{< hint >}}
+To obtain the distance between two colors, the Euclidean distance formula has been used, which allows to find the distance between two points in a space of n dimensions. In this case, it has been used to obtain the distance between two colors in RGB space in the **`colorDistance(c1, c2)`** function.
 {{< /hint >}}
 
-El resultado final es el siguiente:
-{{< hint warning >}}
-**Advertencia:**
+## Result
 
-Para algunas imágenes el procesamiento puede ser tardado debido al recorrido que es necesario realizar, por lo que
-se recomienda utilizar imágenes de un tamaño reducido, asi como también se puede presentar demoras en caso que la
-imágen tenga demasiados colores distintos.
+The final result is the following:
+
+{{< hint warning >}}
+**Warning:**
+
+For some images, the processing may take time due to the path that is necessary to carry out, so it is recommended to use images of a reduced size. Also, delays may occur if the image has too many different colors.
 {{< /hint >}}
 
 {{< p5-iframe sketch="/showcase/sketches/palette.js" width="735" height="600" >}}
 
 {{< hint danger >}}
-**Debilidades:**
+**Weaknesses:**
 
-Si existen muchos colores parecidos, segun el valor de la tolerancia, puede que no se muestren todos los colores 
-importantes que se podrian visualizar con la percepción humana, ya que el orden de procesamiento de la imágen hace
-que los colores en la parte superior tengan mayor prioridad.
+If there are many similar colors, depending on the tolerance value, not all important colors that could be displayed with human perception may be displayed, because the order of image processing causes the colors on top to have a higher priority.
 {{< /hint >}}
