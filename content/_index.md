@@ -1,40 +1,26 @@
 ---
-title: Introduction
+title: Visual Crackers
 type: docs
 ---
 
-# Visual Computing Showcase
-
-Welcome to the [gohugo](https://gohugo.io/) template to create rich content [academic reports](https://www.wordy.com/writers-workshop/writing-an-academic-report/) having [p5.js](https://p5js.org/) sketches.
-
-## Hacking
-
-Install the [gohugo](https://gohugo.io/) [static site generator](https://jamstack.org/generators/) then:
-
-```sh
-$git clone https://github.com/VisualComputing/showcase
-$cd showcase
-$git submodule update --init --recursive
-$hugo server -D --disableFastRender
-```
-
-Deploy with `$git push` after redefined `baseURL` in `config.toml` which should point to your actual public remote.
-
-{{< hint warning >}}
-**Don't rename the repo but leave it as 'showcase'**  
-even so if you decided to rename the repo anyways, say to `newreponame`, don't forget to update all url references of the markdown and js file sources, to reflect that change, i.e., look within all [content folder](https://github.com/VisualComputing/showcase/tree/main/content) files for `showcase` occurrences and replace them by `newreponame`, which btw should easily be doable in any recent open source code editor, e.g., 🔎 in [kate](https://kate-editor.org/) or [vs-codium](https://vscodium.com/).
-{{< /hint >}}
-
-### Remarks
+# Visual Crackers Showcase
 
 {{< hint info >}}
-If you forked the repo don't forget to activate the [actions](https://github.com/VisualComputing/showcase/actions).
+Welcome to the [Visual Crackers](https://github.com/VisualCrackers) team showcase.
 {{< /hint >}}
 
-{{< hint info >}}
-Don't forget to select the `gh-pages` branch as the one to serve your site from at the [pages section of your repo configuration page](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), if it is no so by default.
-{{< /hint >}}
+## What is this showcase?
 
-{{< hint info >}}
-The **showcase** template uses the [hugo-book](https://github.com/alex-shpak/hugo-book) theme by default. Check the [hugo themes site](https://themes.gohugo.io/) if you wish to add other ones.
-{{< /hint >}}
+This website is deployed as a project showcase for the [Visual Computing](https://visualcomputing.github.io/) class at the [Universidad Nacional de Colombia](https://unal.edu.co/).
+
+## What will you find here?
+
+Here you will encounter multiple projects related to Visual Computing that our team has developed during the semester. On the left side of the screen, you will find a menu with different sections, each one containing several code snippets and examples on the topics covered in the class. Additionally, there's and intoduction and conclusion section for each topic, so feel free to explore the content.
+
+## Who are we?
+
+Our team is composed of three [Computer Science](https://ingenieria.bogota.unal.edu.co/es/formacion/pregrado/ingenieria-de-sistemas-y-computacion.html) students. We are:
+
+- [Ivan Yared Lombana](https://github.com/IvanLoLo)
+- [Juan Pablo Ortega](https://github.com/jortegar18)
+- [Sebastián Piñerez](https://github.com/sebaspq)
