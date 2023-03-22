@@ -1,14 +1,12 @@
 ---
+title: Intro & Background
 weight: 2
+type: docs
 ---
 
-{{< hint info >}}
-# Intro & Background
-{{< /hint >}}
+# **Intro & Background**
 
-{{< hint info >}}
 ## Visual Illusions
-{{< /hint >}}
 
 Visual illusions are phenomena that make us perceive something that is not present or that distorts our perception of reality. These illusions are produced by the complex interaction between our visual system and our brain.
 
@@ -20,9 +18,7 @@ These illusions can be produced in many ways, from the manipulation of light and
 
 Visual illusions have a wide range of practical applications in a variety of fields. From advertising and entertainment, to medicine and architecture, being a useful tool to create interesting visual effects and better understand how our visual perception and brain works.
 
-{{< hint info >}}
-## Color Blindness
-{{< /hint >}}
+## [Color Blindness](https://en.wikipedia.org/wiki/Color_blindness)
 
 However, not all living beings see the world in the same way, either because we have different interpretations of reality or because physiologically there are differences that limit or alter the ability to perceive the environment with which we visually interact. This is the case of color blindness.
 
@@ -34,9 +30,7 @@ This disorder is caused by a defect in the retinal cones, the light-sensitive ce
 
 ![Color differences](https://hips.hearstapps.com/housebeautiful/assets/17/04/foliage-color-blindness.jpg "Color differences")
 
-{{< hint info >}}
-### Types of Color Blindness
-{{< /hint >}}
+### [Types of Color Blindness](https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness/types-color-blindness)
 
 There are multiple and different types of color blindness, depending on which type of cone is affected and to what extent:
 
@@ -65,7 +59,3 @@ Visual illusions can also be used to study color blindness and color perception 
 Currently, color blindness is a key aspect to consider in the development of applications and websites that seek to be accessible and inclusive. Likewise, there are a variety of visual aid tools for people with this disorder, which allow them to see and interact with the world more comfortably, either physically or on the Internet.
 
 In the present work, practical exercises related to visual illusions will be addressed, more specifically, focused on color blindness.
-
-{{< hint warning >}}
-For more info on color blindness, consult: (https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness/types-color-blindness).
-{{< /hint >}}

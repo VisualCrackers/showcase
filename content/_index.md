@@ -3,7 +3,8 @@ title: Visual Crackers
 type: docs
 ---
 
-# Visual Crackers Showcase
+# **Visual Crackers Showcase**
+
 
 {{< hint info >}}
 Welcome to the [Visual Crackers](https://github.com/VisualCrackers) team showcase.
