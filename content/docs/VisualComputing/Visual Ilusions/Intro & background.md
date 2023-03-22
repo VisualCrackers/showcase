@@ -18,9 +18,9 @@ These illusions can be produced in many ways, from the manipulation of light and
 
 Visual illusions have a wide range of practical applications in a variety of fields. From advertising and entertainment, to medicine and architecture, being a useful tool to create interesting visual effects and better understand how our visual perception and brain works.
 
-## [Color Blindness](https://en.wikipedia.org/wiki/Color_blindness)
+## Color Blindness
 
-However, not all living beings see the world in the same way, either because we have different interpretations of reality or because physiologically there are differences that limit or alter the ability to perceive the environment with which we visually interact. This is the case of color blindness.
+However, not all living beings see the world in the same way, either because we have different interpretations of reality or because physiologically there are differences that limit or alter the ability to perceive the environment with which we visually interact. This is the case of [color blindness](https://en.wikipedia.org/wiki/Color_blindness).
 
 ![Color blindness](https://images.ctfassets.net/pxcfulgsd9e2/articleImage196109/3f53cdb3e75ee9e5a62e88d6d04baa8f/Colorblindness-Glasses-HN2947-iStock-1224633999-Sized.jpg "Color blindness")
 
@@ -30,9 +30,9 @@ This disorder is caused by a defect in the retinal cones, the light-sensitive ce
 
 ![Color differences](https://hips.hearstapps.com/housebeautiful/assets/17/04/foliage-color-blindness.jpg "Color differences")
 
-### [Types of Color Blindness](https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness/types-color-blindness)
+### Types of Color Blindness
 
-There are multiple and different types of color blindness, depending on which type of cone is affected and to what extent:
+There are multiple and different [types of color blindness](https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness/types-color-blindness), depending on which type of cone is affected and to what extent:
 
 First, there is red-green color blindness. This is the most common type of color blindness, making it difficult to distinguish between the color red and green.
 There are 4 types of red-green color blindness:
