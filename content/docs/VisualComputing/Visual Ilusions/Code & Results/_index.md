@@ -22,7 +22,7 @@ The user can choose between six different color palettes to transform the image.
 {{< /tab >}}
 
 {{< tab "Palette Generator" >}}
-## [Palette Generator](./PaletteGenerator)
+## [Palette Generator](./Palette)
 This implementation in p5.js uses an algorithm that extracts the predominant colors from an image
 and displays a corresponding color palette at the bottom of the image.
 
