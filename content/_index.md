@@ -25,3 +25,5 @@ Our team is composed of three [Computer Science](https://ingenieria.bogota.unal.
 - [Ivan Yared Lombana](https://github.com/IvanLoLo)
 - [Juan Pablo Ortega](https://github.com/jortegar18)
 - [Sebastián Piñerez](https://github.com/sebaspq)
+
+Want to know more about us? Check out our [About](./docs/About/) section.
