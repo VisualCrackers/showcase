@@ -12,7 +12,7 @@ Hello there! This is our team. We're a group of Computer Science students from t
 {{< columns >}}
 ### [Iván Yared Lombana](https://github.com/IvanLoLo)
 
-<img alt="Ivan" style="border-radius: 50%" src="https://lh3.googleusercontent.com/a/AGNmyxbQcZips1D0066pUs2Gweg4iCGNEPPn8xaa0lyatQ=s360" title="Iván Lombana" width="300"/>
+<img alt="Ivan" src="https://lh3.googleusercontent.com/a/AGNmyxbQcZips1D0066pUs2Gweg4iCGNEPPn8xaa0lyatQ=s360#img" title="Iván Lombana" width="300"/>
 
 {{< hint >}}
 Fourth year systems engineering student with interest in backend development and cybersecurity. 
@@ -37,7 +37,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img alt="Sebas" src="https://avatars.githubusercontent.com/u/54643770?v=4#img" title="Sebastián Piñerez" width="300"/>
 
 {{< hint >}}
-Computer Science student at the Universidad Nacional de Colombia. I'm interested in Web development. I'm currently learning React and other web technologies. Aside programming, I love reading, drawing, astronomy, languages and learning new things.
+Computer Science student at UNAL. I'm interested in Web development. I'm currently learning React and other web technologies. Aside programming, I love reading, drawing, astronomy, languages and learning new things.
 {{< /hint >}}
 
 {{< /columns >}}
