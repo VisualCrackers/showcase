@@ -4,19 +4,19 @@ let y = 0;
 let canvasSize = 700;
 
 let images = [
-    'https://llandscapes-10674.kxcdn.com/wp-content/uploads/2019/07/lighting.jpg',
-    'https://www.colorlitelens.com/images/Ishihara/Ishihara_01.jpg',
-    'https://www.colorlitelens.com/images/Ishihara/Ishihara_02.jpg',
-    'https://www.colorlitelens.com/images/Ishihara/Ishihara_03.jpg',
-    'https://www.colorlitelens.com/images/Ishihara/Ishihara_05.jpg',
-    'https://www.colorlitelens.com/images/Ishihara/Ishihara_06.jpg',
-    'https://www.colorlitelens.com/images/Ishihara/Ishihara_08.jpg',
-    'https://www.colorlitelens.com/images/Ishihara/Ishihara_10.jpg',
+    'Landscape.jpg',
+    'Ishihara_01.jpg',
+    'Ishihara_02.jpg',
+    'Ishihara_03.jpg',
+    'Ishihara_05.jpg',
+    'Ishihara_06.jpg',
+    'Ishihara_08.jpg',
+    'Ishihara_10.jpg',
 ];
 
 function preload() {
   let index = floor(random(images.length));
-  img = loadImage(images[index]);
+  img = loadImage('/showcase/assets/' + images[index]);
 }
 
 function setup() {

@@ -5,18 +5,18 @@ let paletteHeight = 30;
 let tolerance = 25;
 
 let images = [
-    'https://llandscapes-10674.kxcdn.com/wp-content/uploads/2019/07/lighting.jpg',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/2560px-Flag_of_Canada_%28Pantone%29.svg.png',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Escudo_de_la_Universidad_Nacional_de_Colombia_%282016%29.svg/1200px-Escudo_de_la_Universidad_Nacional_de_Colombia_%282016%29.svg.png',
-    'https://historiadelavida.editorialaces.com/wp-content/uploads/2019/02/De-donde-viene-el-arcoiris-PORTADA.png',
-    'https://images7.alphacoders.com/532/532603.jpg',
-    'https://elturismoencolombia.com/wp-content/uploads/2021/12/bandera-colombia-turismo.jpg',
-    'https://www.portafolio.co/files/article_multimedia/uploads/2022/11/29/6386773e8cfe9.jpeg'
+    'Landscape.jpg',
+    'Canada.png',
+    'Unal.png',
+    'Rainbow.png',
+    'Urus.jpg',
+    'Colombia.jpg',
+    'Cristales.jpeg'
 ];
 
 function preload() {
   let index = floor(random(images.length));
-  img = loadImage(images[index]);
+  img = loadImage('/showcase/assets/' + images[index]);
 }
 
 function setup() {
