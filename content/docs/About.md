@@ -24,10 +24,11 @@ Rocket League player attempt and altruist at heart.
 
 ### [Juan Pablo Ortega](https://github.com/jortegar18)
 
-<img alt="JuanPablo" src="https://i.ibb.co/F5Sv2fj/5Paleta3.png#img" title="Juan Pablo Ortega" width="300"/>
+<img alt="JuanPablo" src="https://avatars.githubusercontent.com/u/72839162?s=400&u=5e7d12a671516f6d3147b0081abe42270c61229e&v=4" title="Juan Pablo Ortega" width="300"/>
+
 
 {{< hint >}}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+I am a fifth-year systems engineering student at the National University of Colombia. I am interested in machine learning and I am currently learning web development, specifically backend. In addition to my studies, I am very passionate about music and would like to learn music theory
 {{< /hint >}}
 
 <--->
