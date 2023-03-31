@@ -78,7 +78,20 @@ Finally, it was decided to also carry out the color label in a much smaller spec
 The final result is the following Sketch that allows real-time ColorTracking through the camera.
 {{< /hint >}}
 
-{{< p5-iframe sketch="/showcase/sketches/colorTracker.js" width="735" height="525" >}}
+<iframe id="palette" class="sketch" srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            <script src=/showcase/sketches/colorTracker.js>
+            </script>
+          </head>
+          <body>
+          </body>
+        </html>
+      ">
+</iframe>
 
 {{< hint info>}}
 **Colors**
@@ -92,3 +105,11 @@ The opensource library [**Name That Color**](https://chir.ag/projects/ntc/) prov
 
 The tracking and identification of the colors that are selected will be greatly affected by the lighting in the environment or the quality of the camera.
 {{< /hint>}}
+
+<style>
+    .sketch{
+        width: 100%;
+        height: 500px;
+        display: flex;
+    }
+</style>
