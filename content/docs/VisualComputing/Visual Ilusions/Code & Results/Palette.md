@@ -1,7 +1,6 @@
 ---
 weight: 1
 ---
-
 # **Palette Generator**
 
 When creating any type of software, design, or tool, it is important to consider that not all users have the same perception capacity. The colors are variables that really affect the interaction of consumers with the product, so making a *selection of the appropriate palette* is a task that must be properly contemplated, and even more so when trying to make the product **accessible** to everyone.
@@ -72,10 +71,48 @@ The final result is the following:
 For some images, the processing may take time due to the path that is necessary to carry out, so it is recommended to use images of a reduced size. Also, delays may occur if the image has too many different colors.
 {{< /hint >}}
 
-{{< p5-iframe sketch="/showcase/sketches/palette.js" width="735" height="600" >}}
+<iframe id="palette" class="sketch" srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            <script src=/showcase/sketches/palette.js>
+            </script>
+          </head>
+          <body>
+          </body>
+        </html>
+      ">
+</iframe>
+
 
 {{< hint danger >}}
 **Weaknesses:**
 
 If there are many similar colors, depending on the tolerance value, not all important colors that could be displayed with human perception may be displayed, because the order of image processing causes the colors on top to have a higher priority.
 {{< /hint >}}
+
+<style>
+    .sketch{
+        width: 100%;
+        height: 500px;
+        display: flex;
+    }
+</style>
+
+<script>
+  function adjustIframeSize() {
+    // Obtener la altura y ancho de la imagen del sketch de P5
+    var sketchImage = document.querySelector('#palette').contentDocument.querySelector('canvas');
+    var sketchImageHeight = sketchImage.height+ 20;
+
+    // Establecer la altura y ancho del iframe en consecuencia
+    var p5Iframe = document.getElementById('palette');
+    p5Iframe.style.height = sketchImageHeight + 'px';
+  }
+
+  window.addEventListener('load', function () {
+    setTimeout(adjustIframeSize, 1000); // retrasar la ejecución en 1 segundo
+  }, { passive: true });
+</script>
