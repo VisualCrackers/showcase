@@ -2,17 +2,21 @@
 weight: 5
 ---
 
-# **Conclusions & Future work**
+# **Conclusions**
 
-The use of image processing technology, such as the p5.js library and OpenCV, can greatly enhance the visual appeal of applications and improve accessibility for people with visual impairments or color blindness. The ability to change the color palette of an image using tools like p5.js can make it easier to apply modifications to images. Additionally, specific color palettes like IBM, Wong, and Tol can help people with visual impairments better understand the images.
+Image processing technology has revolutionized the way we view and interact with digital media. Libraries such as p5.js and OpenCV provide developers with powerful tools to manipulate images and graphics, allowing for creative and interactive applications. One area where image processing technology can make a significant impact is in improving accessibility for people with visual impairments or color blindness.
 
-It's important to note that the choice of color palette is not a universal solution for visual impairments, as different types of impairments have different limitations. However, recoloring can still be an effective tool for improving accessibility and understanding.
+Recoloring an image is a useful tool for improving image accessibility, as it can help users distinguish between different elements in an image. With the p5.js library, recoloring an image is a straightforward process. The library provides a range of color manipulation tools that allow developers to change the hue, saturation, and brightness of an image with ease.
 
-In addition to aiding people with visual disabilities, color tracking technology can be used in applications that require real-time object tracking, such as in augmented reality or robotics. This can help to detect specific colors in an image or video and take appropriate actions based on that information.
+In addition to general recoloring, it is essential to consider specific color palettes that are designed for people with visual impairments. The IBM, Wong, and Tol palettes are specifically designed to improve accessibility for people with vision problems. These palettes use colors that are more easily distinguishable by people with color blindness, allowing them to better comprehend the image.
 
-Finally, the palette generator tool can be a helpful resource for graphic and product designers, as it can assist in creating visually appealing and harmonious color combinations for their designs.
+While color palettes can be helpful in improving accessibility, it's important to note that different types of visual impairments have different limitations. Therefore, color palette changes cannot guarantee that all colors in an image can be distinguished by people with visual impairments. Nevertheless, recoloring an image is still a valuable tool in improving accessibility and aiding in the comprehension of an image.
 
-Overall, the use of image and graphics processing technology has immense potential to improve people's lives in various ways, from enhancing accessibility to improving design and visual presentation.
+Color tracking is another useful tool in image processing technology. It can be used to detect specific colors in an image or video and take appropriate actions based on that information. For example, color tracking can be used in augmented reality applications to track objects and superimpose digital content onto the real world.
+
+Moreover, the palette generator tool is a helpful resource for graphic and product designers. It can generate color palettes from an image and analyze the color distribution in an image, making it easier to create visually appealing and harmonious color combinations for designs.
+
+In conclusion, image and graphics processing technology has enormous potential to improve people's lives in various ways. The ability to recolor images and use specific color palettes can make images more accessible to people with visual impairments or color blindness. Additionally, color tracking can be used in applications that require real-time object tracking. Finally, the palette generator tool is a valuable resource for graphic and product designers, making it easier to create visually appealing designs.
 
 ## Future Work
 

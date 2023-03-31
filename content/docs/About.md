@@ -24,7 +24,7 @@ Rocket League player attempt and altruist at heart.
 
 ### [Juan Pablo Ortega](https://github.com/jortegar18)
 
-<img alt="JuanPablo" src="https://avatars.githubusercontent.com/u/72839162?s=400&u=5e7d12a671516f6d3147b0081abe42270c61229e&v=4" title="Juan Pablo Ortega" width="300"/>
+<img alt="JuanPablo" src="https://avatars.githubusercontent.com/u/72839162?v=4#img" title="Juan Pablo Ortega" width="300"/>
 
 
 {{< hint >}}
