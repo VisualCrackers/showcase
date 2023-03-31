@@ -47,7 +47,20 @@ It is important to note that the palettes that are available do not represent a 
 
 ## Result
 
-{{< p5-iframe sketch="/showcase/sketches/recoloring.js" width="735" height="525" >}}
+<iframe id="palette" class="sketch" srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            <script src=/showcase/sketches/recoloring.js>
+            </script>
+          </head>
+          <body>
+          </body>
+        </html>
+      ">
+</iframe>
 
 {{< hint danger >}}
 Although a color blind palette can be used, it is not guaranteed that the person will be able to distinguish the colors in the image.
@@ -114,3 +127,27 @@ Although a color blind palette can be used, it is not guaranteed that the person
 ![Ishihara paleta z](https://i.ibb.co/64ThknP/5Paleta2.png "Ishihara con paleta #2")
 
 {{< /columns >}}
+
+<style>
+    .sketch{
+        width: 100%;
+        height: 500px;
+        display: flex;
+    }
+</style>
+
+<script>
+  function adjustIframeSize() {
+    // Obtener la altura y ancho de la imagen del sketch de P5
+    var sketchImage = document.querySelector('#palette').contentDocument.querySelector('canvas');
+    var sketchImageHeight = sketchImage.height+ 20;
+
+    // Establecer la altura y ancho del iframe en consecuencia
+    var p5Iframe = document.getElementById('palette');
+    p5Iframe.style.height = sketchImageHeight + 'px';
+  }
+
+  window.addEventListener('load', function () {
+    setTimeout(adjustIframeSize, 100); // retrasar la ejecución en 0.1 segundos
+  }, { passive: true });
+</script>

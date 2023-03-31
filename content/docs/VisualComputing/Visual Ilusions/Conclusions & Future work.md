@@ -4,15 +4,17 @@ weight: 5
 
 # **Conclusions & Future work**
 
-The use of image processing technology, such as the p5.js library and OpenCV, can greatly enhance the visual appeal of applications and improve accessibility for people with visual impairments or color blindness. The ability to change the color palette of an image using tools like p5.js can make it easier to apply modifications to images. Additionally, specific color palettes like IBM, Wong, and Tol can help people with visual impairments better understand the images.
+## Conclusions
+
+The use of image processing technology, such as the p5.js library, can greatly enhance the visual appeal of applications and improve accessibility for people with visual impairments or color blindness. The ability to change the color palette of an image using tools like p5.js can make it easier to apply modifications to images. Additionally, specific color palettes like IBM, Wong, and Tol can help people with visual impairments better understand the images.
 
 It's important to note that the choice of color palette is not a universal solution for visual impairments, as different types of impairments have different limitations. However, recoloring can still be an effective tool for improving accessibility and understanding.
 
 In addition to aiding people with visual disabilities, color tracking technology can be used in applications that require real-time object tracking, such as in augmented reality or robotics. This can help to detect specific colors in an image or video and take appropriate actions based on that information.
 
-Finally, the palette generator tool can be a helpful resource for graphic and product designers, as it can assist in creating visually appealing and harmonious color combinations for their designs.
+Finally, the palette generator tool can be a helpful resource for graphic and product designers, as it can assist in creating visually appealing and harmonious color combinations for their designs. Overall, the use of image and graphics processing technology has immense potential to improve people's lives in various ways, from enhancing accessibility to improving design and visual presentation.
 
-Overall, the use of image and graphics processing technology has immense potential to improve people's lives in various ways, from enhancing accessibility to improving design and visual presentation.
+![Color blindness](https://www.viewsonic.com/library/wp-content/uploads/2021/06/What-is-Color-Blindness-and-How-Does-Technology-Help.jpg "Color blindness")
 
 ## Future Work
 
