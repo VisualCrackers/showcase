@@ -10,13 +10,13 @@ type: docs
 
 Visual illusions are phenomena that make us perceive something that is not present or that distorts our perception of reality. These illusions are produced by the complex interaction between our visual system and our brain.
 
-The brain receives information through the eyes and process it to create a coherent image of the world around us. However, this process is not always perfect and can be fooled by various visual illusions that make us perceive things differently than they really are.
+The brain receives information through the eyes and processes it to create a coherent image of the world around us. However, this process is not always perfect and can be fooled by various visual illusions that make us perceive things differently than they really are.
 
 ![Optical illusion](https://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/explore/ology-images/brain/optical-illusions/op-illusions-listing-hero/3877180-1-eng-US/op-illusions-listing-hero_twittershare_1024.jpg "Optical illusion")
 
-These illusions can be produced in many ways, from the manipulation of light and color to the manipulation of shape and perspective. Some visual illusions are quite simple and can be easily produced, while others are much more complex and require a deeper understanding of neuroscience and psychology to fully understand.
+These illusions can be produced in many ways, from the manipulation of light and color to the manipulation of shape and perspective. Some visual illusions are quite simple and can be easily produced, while others are much more complex and require a deeper understanding of neuroscience and psychology.
 
-Visual illusions have a wide range of practical applications in a variety of fields. From advertising and entertainment, to medicine and architecture, being a useful tool to create interesting visual effects and better understand how our visual perception and brain works.
+Visual illusions have a wide range of practical applications in a variety of fields. From advertising and entertainment, to medicine and architecture, being a useful tool to create interesting visual effects and to better understand how our visual perception and brain works.
 
 ## Color Blindness
 
