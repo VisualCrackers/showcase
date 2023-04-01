@@ -109,7 +109,7 @@ The tracking and identification of the colors that are selected will be greatly 
 <style>
     .sketch{
         width: 100%;
-        height: 500px;
+        height: 523px;
         display: flex;
     }
 </style>

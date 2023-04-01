@@ -140,14 +140,13 @@ Although a color blind palette can be used, it is not guaranteed that the person
   function adjustIframeSize() {
     // Obtener la altura y ancho de la imagen del sketch de P5
     var sketchImage = document.querySelector('#palette').contentDocument.querySelector('canvas');
-    var sketchImageHeight = sketchImage.height+ 20;
 
     // Establecer la altura y ancho del iframe en consecuencia
     var p5Iframe = document.getElementById('palette');
-    p5Iframe.style.height = sketchImageHeight + 'px';
+    p5Iframe.style.height = Math.round(sketchImage.height*700/sketchImage.width)+24 + 'px';
   }
 
   window.addEventListener('load', function () {
-    setTimeout(adjustIframeSize, 100); // retrasar la ejecución en 0.1 segundos
+    setTimeout(adjustIframeSize, 150); // retrasar la ejecución en 0.1 segundos
   }, { passive: true });
 </script>
