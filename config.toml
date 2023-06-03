@@ -1,7 +1,7 @@
 baseURL = "https://visualcrackers.github.io/showcase"
 languageCode = "es-es"
 title = "Visual Crackers 💥"
-theme = 'book'
+theme = 'hugo-book'
 
 # Book configuration
 disablePathToLower = true
@@ -35,3 +35,6 @@ enableGitInfo = true
   # Theme will print warning if page referenced in markdown does not exists.
   BookPortableLinks = false
 
+[module]
+[[module.imports]]
+path = 'github.com/sebaspq/hugo-book'
