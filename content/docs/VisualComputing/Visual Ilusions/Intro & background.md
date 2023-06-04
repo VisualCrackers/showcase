@@ -1,6 +1,6 @@
 ---
 title: Intro & Background
-weight: 2
+weight: 1
 type: docs
 ---
 
