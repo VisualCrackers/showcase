@@ -2,23 +2,17 @@
 let jupyter;
 let moons = [];
 let bgTexture;
-
-
-
+let europa_texture;
 
 function preload() {
-  earth_texture = loadImage('earth_texture.jpg');
-  moon = loadImage('moon_texture.jpg');
-  jupyter_texture = loadImage('jupyter_texture.jpeg');
-  europa_texture = loadImage('europa_texture.jpg');
-  bgTexture = loadImage('stars_texture.jpeg');
+  moon = loadImage('/showcase/assets/moon_texture.jpg');
+  jupyter_texture = loadImage('/showcase/assets/jupyter_texture.jpeg');
+  europa_texture = loadImage('/showcase/assets/europa_texture.jpg');
+  bgTexture = loadImage('/showcase/assets/stars_texture.jpeg');
 }
 
 function setup() {
   createCanvas(800, 800, WEBGL);
-  
-
-  
   
   // Crear jupiter
   jupyter = new Moon(100, 0, 0.02, 0, jupyter_texture);
@@ -36,10 +30,6 @@ function setup() {
   moons.push(new Moon(20, 280, 0.023, 3, europa_texture));
   moons.push(new Moon(10, 290, 0.028, 4,europa_texture));
   moons.push(new Moon(10, 310, 0.035, 4,europa_texture));
-
- 
-
-  
 }
 
 function draw() {
@@ -51,11 +41,11 @@ function draw() {
   noStroke();
   
   for (let i = 0; i < 3; i++) {
-                    directionalLight(
-                         255, 255, 255 - i * 25,//Color
-                         -1, 1, -1 //Dirección
-                    );
-               }
+      directionalLight(
+            255, 255, 255 - i * 25,//Color
+            -1, 1, -1 //Dirección
+      );
+  }
   
   
   // Mover y mostrar jupiter
