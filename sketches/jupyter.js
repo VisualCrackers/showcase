@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 800, WEBGL);
+  createCanvas(700, 700, WEBGL);
   
   // Crear jupiter
   jupyter = new Moon(100, 0, 0.02, 0, jupyter_texture);
