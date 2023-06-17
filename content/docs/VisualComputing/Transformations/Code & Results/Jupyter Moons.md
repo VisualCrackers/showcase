@@ -25,8 +25,8 @@ weight: 2
 
 <style>
     .sketch{
-        width: 100%;
-        height: 523px;
+        width: 730px;
+        height: 730px;
         display: flex;
     }
 </style>
