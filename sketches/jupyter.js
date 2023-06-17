@@ -21,7 +21,7 @@ function setup() {
   
   
   // Crear jupiter
-  jupyter = new Moon(100, 0, 0.1, 0, jupyter_texture);
+  jupyter = new Moon(100, 0, 0.02, 0, jupyter_texture);
   
   // Crear lunas
   moons.push(new Moon(10, 120, 0.03, 1, moon));
@@ -83,7 +83,7 @@ class Moon {
   }
   
   update() {
-    
+    this.angle -= this.speed;
     this.orbitAngle += this.speed;
   }
   
