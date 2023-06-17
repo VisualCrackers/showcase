@@ -5,8 +5,7 @@ type: docs
 ---
 
 # **Intro & Background**
-
-## Visual Illusions
+# **Visual Illusions**
 
 Visual illusions are phenomena that make us perceive something that is not present or that distorts our perception of reality. These illusions are produced by the complex interaction between our visual system and our brain.
 
@@ -18,7 +17,7 @@ These illusions can be produced in many ways, from the manipulation of light and
 
 Visual illusions have a wide range of practical applications in a variety of fields. From advertising and entertainment, to medicine and architecture, being a useful tool to create interesting visual effects and to better understand how our visual perception and brain works.
 
-## Color Blindness
+## **Color Blindness**
 
 However, not all living beings see the world in the same way, either because we have different interpretations of reality or because physiologically there are differences that limit or alter the ability to perceive the environment with which we visually interact. This is the case of [color blindness](https://en.wikipedia.org/wiki/Color_blindness).
 
@@ -30,7 +29,7 @@ This disorder is caused by a defect in the retinal cones, the light-sensitive ce
 
 ![Color differences](https://hips.hearstapps.com/housebeautiful/assets/17/04/foliage-color-blindness.jpg "Color differences")
 
-### Types of Color Blindness
+### **Types of Color Blindness**
 
 There are multiple and different [types of color blindness](https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness/types-color-blindness), depending on which type of cone is affected and to what extent:
 

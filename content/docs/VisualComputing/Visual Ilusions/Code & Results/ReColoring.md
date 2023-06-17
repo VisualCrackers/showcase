@@ -126,6 +126,8 @@ Although a color blind palette can be used, it is not guaranteed that the person
 
 ![Ishihara paleta z](https://i.ibb.co/64ThknP/5Paleta2.png "Ishihara con paleta #2")
 
+{{< /columns >}}
+
 Full code:
 
 {{< details title="ReColoring.js" open=false >}}
@@ -228,8 +230,6 @@ function getPaletteColor(imgColor) {
 }
 {{< /highlight >}}
 {{< /details >}}
-
-{{< /columns >}}
 
 <style>
     .sketch{
