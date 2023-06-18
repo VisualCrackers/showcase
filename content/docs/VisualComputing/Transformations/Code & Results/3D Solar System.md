@@ -1,8 +1,8 @@
 ---
-weight: 1
+weight: 2
 ---
 
-# **2D Solar System**
+# **3D Solar System**
 
 
 
@@ -12,7 +12,7 @@ weight: 1
           <head>
             <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
             <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
-            <script src=/showcase/sketches/2d_solar_system.js>
+            <script src=/showcase/sketches/3d_solar_system.js>
             </script>
           </head>
           <body>
