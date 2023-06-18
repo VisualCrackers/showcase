@@ -2,7 +2,7 @@
 weight: 2
 ---
 
-# **Jupyter and his moons**
+# **Jupyter and its moons**
 
 
 
