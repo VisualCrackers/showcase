@@ -37,7 +37,7 @@ function draw() {
   background('black');
   orbitControl();
   texture(bgTexture);
-  sphere(800);
+  sphere(2000);
   noStroke();
   
   for (let i = 0; i < 3; i++) {
@@ -47,13 +47,9 @@ function draw() {
       );
   }
   
-  
   // Mover y mostrar jupiter
   jupyter.update();
   jupyter.show();
-  
-  
-  
   
   // Mover y mostrar las lunas
   for (let i = 0; i < moons.length; i++) {

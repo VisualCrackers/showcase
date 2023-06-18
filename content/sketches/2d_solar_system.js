@@ -16,10 +16,10 @@ const earth = new Planet('Earth','dodgerblue',5,75,1,0.75);
 const mars = new Planet('Mars','red',4,90,1,0.60);
 const asteroidsOrbit = new Planet('Asteroids Orbit','grey',5,100,0,0);
 const jupiter = new Planet('Jupiter','pink',14,130,1,0.30);
-const saturn = new Planet('Saturn','darkorange',7,160,1,0.25);
-const uranus = new Planet('Uranus','lightgreen',7,180,1,0.15);
-const neptune = new Planet('Neptune','cyan',5,200,1,0.1);
-const pluto = new Planet('Pluto','gold',3,220,1,0.05);
+const saturn = new Planet('Saturn','darkorange',9,160,1,0.25);
+const uranus = new Planet('Uranus','lightgreen',8,180,1,0.15);
+const neptune = new Planet('Neptune','cyan',7,200,1,0.1);
+const pluto = new Planet('Pluto','gold',1.5,220,1,0.05);
 let rotationMoon = 0;
 let generalSpeed = 1;
 
