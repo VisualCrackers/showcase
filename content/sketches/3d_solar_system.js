@@ -2,7 +2,7 @@ let sizeFactor = 1;
 let speedFactor = 1;
 let asteroidBeltCheckbox = true;
 class CelestialBody {
-  constructor(radius, distance, orbitSpeed, rotationSpeed, color, inclination = 0) {
+  constructor(radius, distance, orbitSpeed, rotationSpeed, color) {
     this.radius = radius;
     this.distance = distance;
     this.orbitSpeed = orbitSpeed;
@@ -12,20 +12,19 @@ class CelestialBody {
     this.orginalRadius = radius;
     this.originalOrbitSpeed = orbitSpeed;
     this.originalRotationSpeed = rotationSpeed;
-    this.inclination = inclination;
   }
 
   update() {
     this.radius = this.orginalRadius*sizeFactor;
     this.orbitSpeed = this.originalOrbitSpeed*speedFactor;
     this.rotationSpeed = this.originalRotationSpeed*speedFactor;
-    this.angle += this.orbitSpeed;
+    this.angle += this.orbitSpeed;  
   }
 
   show() {
     push();
     rotateY(this.angle);
-    rotateX(this.inclination); // Inclinación de la órbita
+    rotateX(50); // Inclinación de la órbita
     translate(this.distance, 0,0);
     rotateY(frameCount * this.rotationSpeed);
     noStroke();
@@ -36,7 +35,7 @@ class CelestialBody {
 }
 
 class Planet extends CelestialBody {
-  constructor(radius, distance, orbitSpeed,rotationSpeed, color, hasRings = false, innerRadius = 0, outerRadius = 0, ringThickness = 0, ringSegments = 0)   {
+  constructor(radius, distance, orbitSpeed,rotationSpeed, color, hasRings = false, innerRadius = 0, outerRadius = 0, ringThickness = 0, ringSegments = 0, inclination = 0)   {
     super(radius, distance,orbitSpeed, rotationSpeed, color);
     this.moons = [];
     this.hasRings = hasRings;
@@ -44,6 +43,7 @@ class Planet extends CelestialBody {
     this.outerRadius = outerRadius;
     this.ringThickness = ringThickness; // Grosor del anillo
     this.ringSegments = ringSegments; // Número de segmentos del anillo (círculos vacíos)
+    this.inclination = inclination;
   }
 
   show() {
@@ -60,6 +60,7 @@ class Planet extends CelestialBody {
     if (this.hasRings) {
       push();
       rotateY(this.angle);
+      rotateX(this.inclination); // Inclinación de la órbita del anillo
       translate(this.distance, 0, 0);
       rotateX(PI / 2); // Rotar el anillo para que esté en el plano XY
       noFill();
@@ -76,8 +77,8 @@ class Planet extends CelestialBody {
 }
 
 class Moon extends CelestialBody {
-  constructor(radius, distance, orbitSpeed, rotationSpeed, color, inclination) {
-    super(radius, distance, orbitSpeed, rotationSpeed, color, inclination);
+  constructor(radius, distance, orbitSpeed, rotationSpeed, color) {
+    super(radius, distance, orbitSpeed, rotationSpeed, color);
   }
 }
 
@@ -109,7 +110,7 @@ class AsteroidBelt {
 let sun, mercury, venus, earth, moon, mars, asteroidBelt, jupiter, saturn, uranus, neptune, pluto;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(700, 700, WEBGL);
 
   sun = new CelestialBody(25, 0, 0, 0, color(255, 200, 50));
   mercury = new Planet(3, 80, 0.01, 0.02, color(200));
@@ -120,10 +121,10 @@ function setup() {
   mars = new Planet(3.5, 350, 0.004, 0.05, color(255, 0, 0));
   asteroidBelt = new AsteroidBelt(450, 600, 300, color(150), 0.6);
   jupiter = new Planet(15, 700, 0.002, 0.06, color(250, 150, 90));
-  saturn = new Planet(12, 900, 0.001, 0.07, color(190, 150, 120), true, 1.5, 2.8, 0.2,150);
-  uranus = new Planet(8, 1100, 0.0008, 0.08, color(120, 150, 190), true, 1.1,1.8, 0.1, 70);
-  neptune = new Planet(7, 1300, 0.0006, 0.09, color(80, 110, 180), true, 1.1,1.8, 0.1, 70);
-  pluto = new Planet(1, 1500, 0.0004, 0.1, color(120, 150, 220));
+  saturn = new Planet(12, 900, 0.001, 0.07, color(190, 150, 120), true, 1.5, 2.8, 0.2,150, PI/8);
+  uranus = new Planet(8, 1100, 0.0008, 0.08, color(120, 150, 190), true, 1.1,1.8, 0.1, 70, PI/2);
+  neptune = new Planet(7, 1300, 0.0006, 0.09, color(80, 110, 180), true, 1.1,1.8, 0.1, 70, PI/5);
+  pluto = new Planet(1, 1500, 0.0004, 0.1, color(120, 150, 220), inclination = PI/4);
   
   camera(0, -300, 1000, 0, 0, 0, 0, 1, 0);
 
@@ -181,7 +182,10 @@ function draw() {
   saturn.show();
   uranus.show();
   neptune.show();
+  push();
+  rotateX(PI/8);
   pluto.show();
+  pop();
 
   mercury.update();
   venus.update();
