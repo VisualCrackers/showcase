@@ -1,4 +1,6 @@
-<!doctype html><html lang=es-es dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content=" 2D Solar System # "><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content=" 2D Solar System # "><meta property="og:type" content="article"><meta property="og:url" content="https://visualcrackers.github.io/showcase/docs/VisualComputing/Transformations/Code-Results/2D-Solar-System/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-06-17T19:10:24-05:00"><title>2 D Solar System | Visual Crackers 💥</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.d22a60abc40100847f86f22dd3b86c75dccdfdb323f5314b4227cb88db47b288.css integrity="sha256-0ipgq8QBAIR/hvIt07hsddzN/bMj9TFLQifLiNtHsog=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
+<!doctype html><html lang=es-es dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="2D Solar System # One way we can easily understand how these transformations work is by recreating a basic 2D solar system. In this model, we can see how objects move in relating to others by observing how the planets rotate around the sun, and how the moon rotates around the earth.
+How does it work? # First of all, we define the class Planet, which will be used to create the planets and the sun (we know it is not a planet, but for this example it works)."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="2D Solar System # One way we can easily understand how these transformations work is by recreating a basic 2D solar system. In this model, we can see how objects move in relating to others by observing how the planets rotate around the sun, and how the moon rotates around the earth.
+How does it work? # First of all, we define the class Planet, which will be used to create the planets and the sun (we know it is not a planet, but for this example it works)."><meta property="og:type" content="article"><meta property="og:url" content="https://visualcrackers.github.io/showcase/docs/VisualComputing/Transformations/Code-Results/2D-Solar-System/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-06-19T16:55:27-05:00"><title>2 D Solar System | Visual Crackers 💥</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.d22a60abc40100847f86f22dd3b86c75dccdfdb323f5314b4227cb88db47b288.css integrity="sha256-0ipgq8QBAIR/hvIt07hsddzN/bMj9TFLQifLiNtHsog=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
 <script defer src=/showcase/en.search.min.3a8d658c77eb93c7f12a2b8af49a700131e474f288eefb605d9fa61576dbe5a7.js integrity="sha256-Oo1ljHfrk8fxKiuK9JpwATHkdPKI7vtgXZ+mFXbb5ac=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/showcase/><span>Visual Crackers 💥</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><span>Visual Computing</span><ul><li><input type=checkbox id=section-4a86fae448a0f2e6d110fe23b7c4ce25 class=toggle>
 <label for=section-4a86fae448a0f2e6d110fe23b7c4ce25 class="flex justify-between"><a role=button>Visual Ilusions</a></label><ul><li><a href=/showcase/docs/VisualComputing/Visual-Ilusions/Intro-background/>Intro & Background</a></li><li><input type=checkbox id=section-0cee58da2e2f7ba7406b81f716a40f1b class=toggle>
@@ -8,8 +10,41 @@
 <label for=section-28214bdf74b91f88b798d6a345130776 class="flex justify-between"><a role=button>Shaders</a></label><ul><li><a href=/showcase/docs/VisualComputing/Shaders/Intro-background/>Intro & Background</a></li><li><input type=checkbox id=section-2861031ceef2b1efc95889a5715c6ea4 class=toggle>
 <label for=section-2861031ceef2b1efc95889a5715c6ea4 class="flex justify-between"><a href=/showcase/docs/VisualComputing/Shaders/Code-Results/>Code & Results</a></label><ul><li><a href=/showcase/docs/VisualComputing/Shaders/Code-Results/Color-Blender/>Color Blender</a></li><li><a href=/showcase/docs/VisualComputing/Shaders/Code-Results/Glitch-Board/>Glitch Board</a></li><li><a href=/showcase/docs/VisualComputing/Shaders/Code-Results/Mosaic/>Mosaic</a></li><li><a href=/showcase/docs/VisualComputing/Shaders/Code-Results/Smart-Mosaic/>Smart Mosaic</a></li></ul></li><li><a href=/showcase/docs/VisualComputing/Shaders/Conclusions-Future-work/>Conclusions & Future Work</a></li></ul></li></ul></li><li><a href=/showcase/docs/About/>About</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/showcase/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>2 D Solar System</strong>
-<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#2d-solar-system><strong>2D Solar System</strong></a></li></ul></nav></aside></header><article class=markdown><h1 id=2d-solar-system><strong>2D Solar System</strong>
-<a class=anchor href=#2d-solar-system>#</a></h1><iframe id=palette class=sketch srcdoc="
+<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#2d-solar-system><strong>2D Solar System</strong></a><ul><li><a href=#how-does-it-work>How does it work?</a></li><li><a href=#result>Result</a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=2d-solar-system><strong>2D Solar System</strong>
+<a class=anchor href=#2d-solar-system>#</a></h1><p>One way we can easily understand how these transformations work is by recreating a basic 2D solar system. In this model, we can see how objects move in relating to others by observing how the planets rotate around the sun, and how the moon rotates around the earth.</p><h2 id=how-does-it-work>How does it work?
+<a class=anchor href=#how-does-it-work>#</a></h2><p>First of all, we define the class Planet, which will be used to create the planets and the sun (we know it is not a planet, but for this example it works). This class has the following attributes:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Planet</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>,<span style=color:#a6e22e>color</span>,<span style=color:#a6e22e>dimension</span>,<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>angle</span>,<span style=color:#a6e22e>speed</span>){
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>color</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>color</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>dimension</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>dimension</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>distance</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>distance</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>angle</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>speed</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>speed</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Then, we create the planets instances and define the attributes for each one of them. As for the sun&rsquo;s attributes, we use a speed of 0, because it should remain still in the center of the canvas.</p><p>We then define a function <strong><code>planetShow</code></strong> for each of the planets, which will be used to display them on the canvas. This function will be called in the <strong><code>draw</code></strong> function, which is executed continuously. Inside it, we also draw the orbit of each planet taking into account the distance attribute. Finnaly we update the angle attribute, which will be used to calculate the position of the planet in the next frame. Here we can see the code for the Earth:</p><blockquote class=book-hint>It is important to note the use of the <strong><code>push()</code></strong> and <strong><code>pop()</code></strong> functions. These functions are used to isolate the transformations applied inside them, so that they don&rsquo;t affect the rest of the code. In this case, we use them to isolate the transformations applied to each planet, so that they don&rsquo;t affect the rest of the model.</blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>earthShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet orbit
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;grey&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>distance</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2.8</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>angle</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>dimension</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Moon
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>fill</span>(<span style=color:#e6db74>&#39;white&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>distance</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#f92672>-</span><span style=color:#a6e22e>rotationMoon</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>7</span>,<span style=color:#ae81ff>7</span>,<span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();   
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>speed</span>; 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotationMoon</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>12</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>As you can see, we also draw the Moon inside it, using similar methods as for the planets but considering the Earth as the point of reference for it to rotate around.</p><h2 id=result>Result
+<a class=anchor href=#result>#</a></h2><p>The resulting sketch is shown below. You can also find the full code in the bottom of the page.</p><iframe id=palette class=sketch srcdoc="
         <!DOCTYPE html>
         <html>
           <head>
@@ -21,5 +56,214 @@
           <body>
           </body>
         </html>
-      "></iframe><style>.sketch{width:730px;height:730px;display:flex}</style></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcrackers/showcase/commit/6bb909ba91b0d80adca5d9a47563a4d8ed79b3f0 title='Last modified by Sebastián Piñerez | June 18, 2023' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
-<span>June 18, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#2d-solar-system><strong>2D Solar System</strong></a></li></ul></nav></div></aside></main></body></html>
+      "></iframe><p>Full code</p><details><summary>2D_solar_system.js</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Planet</span> {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>,<span style=color:#a6e22e>color</span>,<span style=color:#a6e22e>dimension</span>,<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>angle</span>,<span style=color:#a6e22e>speed</span>){
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>color</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>color</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>dimension</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>dimension</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>distance</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>distance</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>angle</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>speed</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>speed</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>rotationMoon</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> sun, <span style=color:#a6e22e>mercury</span>, <span style=color:#a6e22e>venus</span>, <span style=color:#a6e22e>earth</span>, <span style=color:#a6e22e>mars</span>, <span style=color:#a6e22e>asteroidsOrbit</span>, <span style=color:#a6e22e>jupiter</span>, <span style=color:#a6e22e>saturn</span>, <span style=color:#a6e22e>uranus</span>, <span style=color:#a6e22e>neptune</span>, <span style=color:#a6e22e>pluto</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>700</span>,<span style=color:#ae81ff>700</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>angleMode</span>(<span style=color:#a6e22e>DEGREES</span>);
+</span></span><span style=display:flex><span>  sun <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Planet</span>(<span style=color:#e6db74>&#39;Sun&#39;</span>,<span style=color:#e6db74>&#39;yellow&#39;</span>,<span style=color:#ae81ff>25</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mercury</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Planet</span>(<span style=color:#e6db74>&#39;Mercury&#39;</span>,<span style=color:#e6db74>&#39;orange&#39;</span>,<span style=color:#ae81ff>3</span>,<span style=color:#ae81ff>18</span>,<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>360</span>),<span style=color:#ae81ff>0.479</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>venus</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Planet</span>(<span style=color:#e6db74>&#39;Venus&#39;</span>,<span style=color:#e6db74>&#39;#937D64&#39;</span>,<span style=color:#ae81ff>5</span>,<span style=color:#ae81ff>30</span>,<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>360</span>),<span style=color:#ae81ff>0.35</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>earth</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Planet</span>(<span style=color:#e6db74>&#39;Earth&#39;</span>,<span style=color:#e6db74>&#39;dodgerblue&#39;</span>,<span style=color:#ae81ff>5</span>,<span style=color:#ae81ff>50</span>,<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>360</span>),<span style=color:#ae81ff>0.29</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mars</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Planet</span>(<span style=color:#e6db74>&#39;Mars&#39;</span>,<span style=color:#e6db74>&#39;red&#39;</span>,<span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>65</span>,<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>360</span>),<span style=color:#ae81ff>0.24</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>asteroidsOrbit</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Planet</span>(<span style=color:#e6db74>&#39;Asteroids Orbit&#39;</span>,<span style=color:#e6db74>&#39;grey&#39;</span>,<span style=color:#ae81ff>5</span>,<span style=color:#ae81ff>80</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>jupiter</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Planet</span>(<span style=color:#e6db74>&#39;Jupiter&#39;</span>,<span style=color:#e6db74>&#39;pink&#39;</span>,<span style=color:#ae81ff>14</span>,<span style=color:#ae81ff>100</span>,<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>360</span>),<span style=color:#ae81ff>0.13</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>saturn</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Planet</span>(<span style=color:#e6db74>&#39;Saturn&#39;</span>,<span style=color:#e6db74>&#39;darkorange&#39;</span>,<span style=color:#ae81ff>9</span>,<span style=color:#ae81ff>130</span>,<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>360</span>),<span style=color:#ae81ff>0.097</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>uranus</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Planet</span>(<span style=color:#e6db74>&#39;Uranus&#39;</span>,<span style=color:#e6db74>&#39;lightgreen&#39;</span>,<span style=color:#ae81ff>8</span>,<span style=color:#ae81ff>160</span>,<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>360</span>),<span style=color:#ae81ff>0.068</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>neptune</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Planet</span>(<span style=color:#e6db74>&#39;Neptune&#39;</span>,<span style=color:#e6db74>&#39;cyan&#39;</span>,<span style=color:#ae81ff>7</span>,<span style=color:#ae81ff>190</span>,<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>360</span>),<span style=color:#ae81ff>0.054</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pluto</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Planet</span>(<span style=color:#e6db74>&#39;Pluto&#39;</span>,<span style=color:#e6db74>&#39;gold&#39;</span>,<span style=color:#ae81ff>1.5</span>,<span style=color:#ae81ff>240</span>,<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>360</span>),<span style=color:#ae81ff>0.046</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>background</span>(<span style=color:#e6db74>&#39;#000000&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#a6e22e>width</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>height</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>sunShow</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mercuryShow</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>venusShow</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>earthShow</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>marsShow</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>asteroidsShow</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>jupiterShow</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>saturnShow</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>uranusShow</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>neptuneShow</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>plutoShow</span>();
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>sunShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(sun.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(sun.<span style=color:#a6e22e>distance</span>,sun.<span style=color:#a6e22e>distance</span>,sun.<span style=color:#a6e22e>dimension</span>);  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mercuryShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet orbit
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;grey&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>mercury</span>.<span style=color:#a6e22e>distance</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2.8</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>mercury</span>.<span style=color:#a6e22e>angle</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>mercury</span>.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>mercury</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>mercury</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>mercury</span>.<span style=color:#a6e22e>dimension</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>(); 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mercury</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>mercury</span>.<span style=color:#a6e22e>speed</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>venusShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//Draw this.Planet orbit
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;grey&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>venus</span>.<span style=color:#a6e22e>distance</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2.8</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//Draw this.Planet
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>venus</span>.<span style=color:#a6e22e>angle</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>venus</span>.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>venus</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>venus</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>venus</span>.<span style=color:#a6e22e>dimension</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>(); 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>venus</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>venus</span>.<span style=color:#a6e22e>speed</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>earthShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet orbit
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;grey&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>distance</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2.8</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>angle</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>dimension</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Moon
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>fill</span>(<span style=color:#e6db74>&#39;white&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>distance</span>)
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#f92672>-</span><span style=color:#a6e22e>rotationMoon</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>7</span>,<span style=color:#ae81ff>7</span>,<span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();   
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>earth</span>.<span style=color:#a6e22e>speed</span>; 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotationMoon</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>12</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>marsShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet orbit
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;grey&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>mars</span>.<span style=color:#a6e22e>distance</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2.8</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>mars</span>.<span style=color:#a6e22e>angle</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>mars</span>.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>mars</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>mars</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>mars</span>.<span style=color:#a6e22e>dimension</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();   
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mars</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>mars</span>.<span style=color:#a6e22e>speed</span>;  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>asteroidsShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>randomAngle</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>randomOffset</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>100</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>randomAngle</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>360</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>randomOffset</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>10</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>randomAngle</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>asteroidsOrbit</span>.<span style=color:#a6e22e>distance</span><span style=color:#f92672>+</span> <span style=color:#a6e22e>randomOffset</span>,<span style=color:#a6e22e>asteroidsOrbit</span>.<span style=color:#a6e22e>distance</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>randomOffset</span>,<span style=color:#ae81ff>0.8</span>)
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();    
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>jupiterShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet orbit
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;grey&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>jupiter</span>.<span style=color:#a6e22e>distance</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2.8</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>6</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>jupiter</span>.<span style=color:#a6e22e>angle</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>jupiter</span>.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>jupiter</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>jupiter</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>jupiter</span>.<span style=color:#a6e22e>dimension</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();   
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>jupiter</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>jupiter</span>.<span style=color:#a6e22e>speed</span>;  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>saturnShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet orbit
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;grey&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>saturn</span>.<span style=color:#a6e22e>distance</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2.8</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>6</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>saturn</span>.<span style=color:#a6e22e>angle</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>saturn</span>.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>saturn</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>saturn</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>saturn</span>.<span style=color:#a6e22e>dimension</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw Saturn Ring
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>3</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;grey&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>saturn</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>saturn</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#ae81ff>18</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();   
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>saturn</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>saturn</span>.<span style=color:#a6e22e>speed</span>;  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>uranusShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet orbit
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;grey&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>uranus</span>.<span style=color:#a6e22e>distance</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2.8</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>6</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>uranus</span>.<span style=color:#a6e22e>angle</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>uranus</span>.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>uranus</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>uranus</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>uranus</span>.<span style=color:#a6e22e>dimension</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>(); 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>uranus</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>uranus</span>.<span style=color:#a6e22e>speed</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>neptuneShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet orbit
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;grey&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>neptune</span>.<span style=color:#a6e22e>distance</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2.8</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>6</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>neptune</span>.<span style=color:#a6e22e>angle</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>neptune</span>.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>neptune</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>neptune</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>neptune</span>.<span style=color:#a6e22e>dimension</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>(); 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>neptune</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>neptune</span>.<span style=color:#a6e22e>speed</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>plutoShow</span>(){
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet orbit
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;grey&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#a6e22e>pluto</span>.<span style=color:#a6e22e>distance</span><span style=color:#f92672>*</span><span style=color:#ae81ff>2.8</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>6</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Draw this.Planet
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>rotate</span>(<span style=color:#a6e22e>pluto</span>.<span style=color:#a6e22e>angle</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>pluto</span>.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>pluto</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>pluto</span>.<span style=color:#a6e22e>distance</span>,<span style=color:#a6e22e>pluto</span>.<span style=color:#a6e22e>dimension</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>(); 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pluto</span>.<span style=color:#a6e22e>angle</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>pluto</span>.<span style=color:#a6e22e>speed</span>;
+</span></span><span style=display:flex><span>}</span></span></code></pre></div></div></details><style>.sketch{width:730px;height:730px;display:flex}</style></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcrackers/showcase/commit/8fe48cde066646788e4241af39653c72c92ede17 title='Last modified by Sebastián Piñerez | June 19, 2023' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
+<span>June 19, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#2d-solar-system><strong>2D Solar System</strong></a><ul><li><a href=#how-does-it-work>How does it work?</a></li><li><a href=#result>Result</a></li></ul></li></ul></nav></div></aside></main></body></html>
