@@ -1,6 +1,6 @@
 let sizeFactor = 1;
 let speedFactor = 1;
-let asteroidBeltCheckbox = true;
+let asteroidBeltCheckbox = false;
 let selectedPlanet = null;
 
 class Star {
@@ -187,7 +187,7 @@ function setup() {
   speedLabel.style('color', 'white');
 
   // Crea el checkbox para el cinturón de asteroides
-  asteroidBeltCheckbox = createCheckbox('Asteroid Belt', true);
+  asteroidBeltCheckbox = createCheckbox('Asteroid Belt', false);
   asteroidBeltCheckbox.position(20, 80);
   asteroidBeltCheckbox.style('color', 'white');
 
