@@ -141,31 +141,31 @@ function setup() {
   createCanvas(700, 700, WEBGL);
   camera(0, -300, 1000, 0, 0, 0, 0, 1, 0);
 
-  sun = new Star(25, color(255, 200, 50));
-  mercury = new Planet(3, 80, 0.01, 0.02, color(200));
+  sun = new Star(70, color('#EAD740'));
+  mercury = new Planet(0.8, 250, 0.00479, 0.02, color('#999999'));
   sun.planets.push(mercury);
-  venus = new Planet(5, 120, 0.008, 0.03, color(150, 125, 100));
+  venus = new Planet(2.4, 450, 0.0035, 0.03, color('#B1894F'));
   sun.planets.push(venus);
-  earth = new Planet(6, 240, 0.006, 0.04, color(0, 100, 255));
+  earth = new Planet(2.4, 550, 0.00298, 0.04, color('#06429F'));
   sun.planets.push(earth);
-  moon = new Moon(1.2, 35, 0.1, 0.1, color(200), 50, PI/8);
+  moon = new Moon(0.6, 16, 0.1, 0.1, color(200), 50, PI/8);
   earth.moons.push(moon);
-  mars = new Planet(3.5, 350, 0.004, 0.05, color(255, 0, 0));
+  mars = new Planet(1.4, 1000, 0.00241, 0.05, color('#D95B2E'));
   sun.planets.push(mars);
-  asteroidBelt = new AsteroidBelt(450, 600, 300, color(150), 0.6);
-  jupiter = new Planet(15, 700, 0.002, 0.06, color(250, 150, 90));
+  asteroidBelt = new AsteroidBelt(1250, 2000, 300, color(150), 0.6);
+  jupiter = new Planet(14, 2200, 0.00131, 0.06, color('#D39E7B'));
   sun.planets.push(jupiter);
-  saturn = new Planet(12, 900, 0.001, 0.07, color(190, 150, 120), 0, PI/8, true, 1.5, 2.8, 0.2,150);
+  saturn = new Planet(12, 3000, 0.0097, 0.07, color('#CAAA67'), 0, PI/8, true, 1.5, 2.5, 0.2,150);
   sun.planets.push(saturn);
-  uranus = new Planet(8, 1100, 0.0008, 0.08, color(120, 150, 190), 0, PI/2, true, 1.1,1.8, 0.1, 70);
+  uranus = new Planet(5, 4000, 0.0068, 0.08, color('#C4EAEE'), 0, PI/2, true, 1.3,1.8, 0.08, 60);
   sun.planets.push(uranus);
-  neptune = new Planet(7, 1300, 0.0006, 0.09, color(80, 110, 180), 0, PI/5, true, 1.1,1.8, 0.1, 70);
+  neptune = new Planet(4.9, 4500, 0.0054, 0.09, color('#4575FF'), 0, PI/5, true, 1.3,1.5, 0.01, 30);
   sun.planets.push(neptune);
-  pluto = new Planet(1, 1500, 0.0004, 0.1, color(120, 150, 220), PI/8, 0);
+  pluto = new Planet(0.4, 5000, 0.0046, 0.1, color('#B5AA9F'), PI/8, 0);
   sun.planets.push(pluto);
 
   // Crea el slider para ajustar el tamaño de los planetas
-  sizeSlider = createSlider(1, 5, 1, 0.1);
+  sizeSlider = createSlider(1, 4, 1, 0.1);
   sizeSlider.position(20, 20);
   sizeSlider.style('width', '150px');
   sizeSlider.input(updateSize); // Llama a la función updateSize cuando se cambia el valor del slider
@@ -176,7 +176,7 @@ function setup() {
   sizeLabel.style('color', 'white');
 
   // Crea el slider para ajustar la velocidad de los planetas
-  speedSlider = createSlider(0.2, 10, 1, 0.1);
+  speedSlider = createSlider(0.1, 10, 1, 0.1);
   speedSlider.position(20, 50);
   speedSlider.style('width', '150px');
   speedSlider.input(updateSpeed); // Llama a la función updateSpeed cuando se cambia el valor del slider
@@ -230,10 +230,7 @@ function updateSelectedPlanet() {
 
 function updateCamera() {
   if (selectedPlanet) {
-    let distance = selectedPlanet.radius*15 + 20; // Distancia de la cámara desde el planeta (ajustable)
-    /* if (distance < selectedPlanet.radius*2) {
-      distance = selectedPlanet.radius*2;
-    } */
+    let distance = selectedPlanet.radius*5 + 50; // Distancia de la cámara desde el planeta (ajustable)
     let x = selectedPlanet.x;
     let y = selectedPlanet.y;
     let z = selectedPlanet.z;
