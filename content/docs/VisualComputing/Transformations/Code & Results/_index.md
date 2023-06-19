@@ -9,6 +9,26 @@ In this sections, we'll present the main and more interesting results of the dif
 
 ## Snippets
 
+Here we'll present a brief description of each one of the code snippets.
+
+{{< tabs "uniqueid" >}}
+
+{{< tab "2D solar system" >}}
+## [2D solar system](./2D-Solar-System)
+
+This example uses the basic transformations methods to create a cool looking 2D solar system.
+
+<img class="image" alt="2D solar system" src="https://i.ibb.co/RD2330J/2dSS.png" title="2D solar system" width="500"/>
+{{< /tab >}}
+
+{{< tab "3D solar system" >}}
+## [3D solar system](./3D-Solar-System)
+This model uses the 3D transformations to create a 3D solar system. It also adds some interactivity to the model, so that we can move around the solar system and see it from different perspectives.
+
+<img class="image" alt="3D solar system" src="https://i.ibb.co/ZTj5hsS/3dSS.png" title="3D solar system" width="500"/>
+{{< /tab >}}
+
+{{< /tabs >}}
 
 <style>
     .image {

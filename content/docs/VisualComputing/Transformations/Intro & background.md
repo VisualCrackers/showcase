@@ -51,14 +51,38 @@ In 3D, rotations can be performed around a specific axis, such as the x, y, or z
 
 Lighting plays a crucial role in the visual perception of objects in a 3D environment. By manipulating light properties such as direction, intensity, and color, we can simulate different lighting conditions and add realism to our creations.
 
-There are different lighting models, such as the Phong lighting model, that take into account the interaction of light with objects and their surfaces to calculate how it reflects and diffuses.
+In p5.js, there are several types of lighting that can be used to enhance the visual appearance of 3D scenes. Here are some of the lighting types commonly used in p5.js:
 
-In addition to lighting models, special effects such as shadows, reflections, and textures can be applied to achieve even more realistic results.
+1. **Ambient Light:**
+Ambient light simulates the overall illumination in a scene by evenly lighting all objects. It doesn't have a specific direction or source but provides a base level of light that helps to eliminate pure darkness. The ambientLight() function in p5.js allows you to set the color and intensity of the ambient light.
+
+2. **Directional Light:**
+Directional light represents a distant light source, such as the sun, that emits light rays in parallel. It has a specific direction and illuminates objects uniformly from one side. The directionalLight() function in p5.js lets you define the direction, color, and intensity of the directional light.
+
+3. **Point Light:**
+Point light simulates a light source that radiates light uniformly in all directions from a specific point in space. It creates smooth shading on objects, with the intensity decreasing as the distance from the light source increases. The pointLight() function in p5.js allows you to specify the position, color, and intensity of the point light.
+
+4. **Spot Light:**
+Spot light represents a cone-shaped light source that illuminates objects within a defined cone angle. It has a position, direction, and a narrow beam of light. The intensity of the spot light decreases as objects move away from the cone's center. The spotLight() function in p5.js enables you to set the position, direction, cone angle, and other parameters for the spot light.
 
 ### **Transformation Trees**
 
-To efficiently manage multiple transformations, transformation trees are used. These hierarchical structures allow us to combine and apply transformations in a specific order, creating more complex visual effects.
+Transformation trees are hierarchical structures used to manage multiple transformations efficiently. They enable the combination and application of transformations in a specific order, resulting in more complex visual effects.
 
-A transformation tree is like following a series of steps to achieve a final transformation. Each node in the tree represents an individual transformation, and the nodes are organized in a hierarchical structure that determines the order in which transformations are applied.
+In p5.js, transformation trees can be implemented using a technique known as the push-pop matrix stack. This stack-based approach allows you to define a series of transformations and manage them in a hierarchical manner.
 
-This hierarchical organization allows us to create animations and complex visual effects by combining different transformations sequentially.
+Here's how you can use transformation trees in p5.js:
+
+1. **Begin a Transformation Tree:**
+To start a transformation tree, you use the ``push()`` function in p5.js. This function saves the current state of transformations and pushes it onto the transformation stack.
+
+2. **Apply Transformations:**
+Within the transformation tree, you can apply various transformations such as translations, rotations, and scalings. These transformations alter the coordinate system, allowing you to manipulate objects in different ways. For example, you can use the ``translate()``, ``rotate()``, and ``scale()`` functions in p5.js to apply these transformations.
+
+3. **Nesting Transformation Trees:**
+You can create more complex transformations by nesting transformation trees within each other. By using additional ``push()`` and ``pop()`` function calls, you can create a hierarchical structure where transformations at each level affect their child nodes.
+
+4. **End a Transformation Tree:**
+To conclude a transformation tree, you use the ``pop()`` function. This function pops the most recently saved state of transformations from the stack, reverting to the previous state.
+
+By organizing transformations in a hierarchical structure, transformation trees allow you to create animations and complex visual effects. For example, you can animate an object's position, scale, and rotation over time by combining translation, scaling, and rotation transformations within a transformation tree. Furthermore, you can apply transformation trees to create intricate scenes with multiple objects. By nesting transformation trees, you can create parent-child relationships between objects, enabling transformations relative to their parent's coordinate system.
