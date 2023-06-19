@@ -3,33 +3,37 @@ let jupyter;
 let moons = [];
 let bgTexture;
 let europa_texture;
+let io_texture;
+let ganimedes_texture;
+let calisto_texture;
 
 function preload() {
-  moon = loadImage('/showcase/assets/moon_texture.jpg');
+
   jupyter_texture = loadImage('/showcase/assets/jupyter_texture.jpeg');
+  io_texture = loadImage('/showcase/assets/io_texture.jpg');
   europa_texture = loadImage('/showcase/assets/europa_texture.jpg');
-  bgTexture = loadImage('/showcase/assets/stars_texture.jpeg');
+  ganimedes_texture = loadImage('/showcase/assets/ganimedes_texture.jpg');
+  calisto_texture = loadImage('/showcase/assets/calisto_texture.jpg');
+
+  bgTexture = loadImage('/showcase/assets/nocheHD.jpg');
 }
 
 function setup() {
   createCanvas(700, 700, WEBGL);
+  camera(0, -300, 1000, 0, 0, 0, 0, 1, 0);
   
   // Crear jupiter
-  jupyter = new Moon(100, 0, 0.02, 0, jupyter_texture);
+  jupyter = new Moon(100, 0, 0, 0.02, 0, jupyter_texture);
   
   // Crear lunas
-  moons.push(new Moon(10, 120, 0.03, 1, moon));
-  moons.push(new Moon(10, 135, 0.025, 4,europa_texture));
-  
-  moons.push(new Moon(15, 150, 0.02, 2, moon));
-  
-  moons.push(new Moon(10, 170, 0.03, 4,europa_texture));
-  moons.push(new Moon(25, 210, 0.025, 4,europa_texture));
+  moons.push(new Moon(15, 200, -60, 0.02, 1, io_texture));
 
-  moons.push(new Moon(10, 250, 0.017, 4,europa_texture));
-  moons.push(new Moon(20, 280, 0.023, 3, europa_texture));
-  moons.push(new Moon(10, 290, 0.028, 4,europa_texture));
-  moons.push(new Moon(10, 310, 0.035, 4,europa_texture));
+  moons.push(new Moon(10, 300, -20, 0.015, 4,europa_texture));
+  
+  moons.push(new Moon(30, 400, 20, 0.019, 2, ganimedes_texture));
+  
+  moons.push(new Moon(20, 600, 30, 0.017, 4, calisto_texture));
+
 }
 
 function draw() {
@@ -39,6 +43,7 @@ function draw() {
   texture(bgTexture);
   sphere(2000);
   noStroke();
+  rotateZ(-0.3)
   
   for (let i = 0; i < 3; i++) {
       directionalLight(
@@ -59,9 +64,10 @@ function draw() {
 }
 
 class Moon {
-  constructor(radius, distance, speed, angle, textura) {
+  constructor(radius, distance, distanceY, speed, angle, textura) {
     this.radius = radius;
     this.distance = distance;
+    this.distanceY = distanceY;
     this.speed = speed;
     this.angle = angle;
     this.textura = textura;
@@ -72,13 +78,12 @@ class Moon {
     this.angle -= this.speed;
     this.orbitAngle += this.speed;
   }
-  
+
   show() {
     push();
     rotateY(frameCount * 0.01);
-    translate(this.distance * cos(this.orbitAngle), 0, this.distance * sin(this.orbitAngle));
+    translate(this.distance * cos(this.orbitAngle), this.distanceY, this.distance * sin(this.orbitAngle));
     rotateY(this.angle);
-
     texture(this.textura);
     sphere(this.radius);
     pop();
