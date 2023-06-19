@@ -9,23 +9,23 @@ class Planet {
   }
 }
 
-const sun = new Planet('Sun','yellow',25,0,0,0);
-const mercury = new Planet('Mercury','orange',3,30,1,1);
-const venus = new Planet('Venus','#937D64',5,50,1,0.5);
-const earth = new Planet('Earth','dodgerblue',5,75,1,0.75);
-const mars = new Planet('Mars','red',4,90,1,0.60);
-const asteroidsOrbit = new Planet('Asteroids Orbit','grey',5,100,0,0);
-const jupiter = new Planet('Jupiter','pink',14,130,1,0.30);
-const saturn = new Planet('Saturn','darkorange',9,160,1,0.25);
-const uranus = new Planet('Uranus','lightgreen',8,180,1,0.15);
-const neptune = new Planet('Neptune','cyan',7,200,1,0.1);
-const pluto = new Planet('Pluto','gold',1.5,220,1,0.05);
 let rotationMoon = 0;
-let generalSpeed = 1;
+let sun, mercury, venus, earth, mars, asteroidsOrbit, jupiter, saturn, uranus, neptune, pluto;
 
 function setup(){
   createCanvas(700,700);
   angleMode(DEGREES);
+  sun = new Planet('Sun','yellow',25,0,0,0);
+  mercury = new Planet('Mercury','orange',3,18,random(360),0.479);
+  venus = new Planet('Venus','#937D64',5,30,random(360),0.35);
+  earth = new Planet('Earth','dodgerblue',5,50,random(360),0.29);
+  mars = new Planet('Mars','red',4,65,random(360),0.24);
+  asteroidsOrbit = new Planet('Asteroids Orbit','grey',5,80,0,0);
+  jupiter = new Planet('Jupiter','pink',14,100,random(360),0.13);
+  saturn = new Planet('Saturn','darkorange',9,130,random(360),0.097);
+  uranus = new Planet('Uranus','lightgreen',8,160,random(360),0.068);
+  neptune = new Planet('Neptune','cyan',7,190,random(360),0.054);
+  pluto = new Planet('Pluto','gold',1.5,240,random(360),0.046);
 }
 
 function draw(){
