@@ -57,4 +57,14 @@ Visual illusions can also be used to study color blindness and color perception 
 
 Currently, color blindness is a key aspect to consider in the development of applications and websites that seek to be accessible and inclusive. Likewise, there are a variety of visual aid tools for people with this disorder, which allow them to see and interact with the world more comfortably, either physically or on the Internet.
 
+## **Coloring**
+
+Coloring in visual computing refers to the process of applying or modifying color information in digital images or videos. It involves techniques and algorithms that manipulate the color channels of an image to achieve various effects, enhance visual appearance, or convey specific information. Coloring can be used for tasks such as image enhancement, color correction, artistic rendering, and image manipulation. It plays a crucial role in computer graphics, computer vision, and image processing applications, enabling the generation of realistic and visually appealing images and videos.
+
+## **Masking**
+
+Masking in visual computing is a technique used to isolate or extract specific regions or objects of interest from an image or video. It involves creating a binary mask that defines the regions to be retained or discarded for further processing. A mask is typically a grayscale image, where the white pixels represent the areas of interest (foreground), and the black pixels represent the areas to be ignored (background). Masking is extensively used in computer vision tasks such as object recognition, segmentation, tracking, and image editing. By accurately defining the regions of interest, masking enables targeted analysis and manipulation of visual content, facilitating various computer vision applications.
+
+{{< hint >}}
 In the present work, practical exercises related to visual illusions will be addressed, more specifically, focused on color blindness.
+{{< /hint >}}
