@@ -1,11 +1,7 @@
 // Variables globales
 let jupyter;
 let moons = [];
-let bgTexture;
-let europa_texture;
-let io_texture;
-let ganimedes_texture;
-let calisto_texture;
+let selectedMoon = null;
 
 function preload() {
 
@@ -26,15 +22,20 @@ function setup() {
   jupyter = new Moon(100, 0, 0, 0.02, 0, jupyter_texture);
   
   // Crear lunas
-  moons.push(new Moon(15, 200, -60, 0.02, 1, io_texture));
 
-  moons.push(new Moon(10, 300, -20, 0.015, 4,europa_texture));
+  let io, europa, ganimedes, calisto;
+
+  io = moons.push(new Moon(15, 200, -60, 0.02, 1, io_texture));
+
+  europa = moons.push(new Moon(10, 300, -20, 0.015, 4,europa_texture));
   
-  moons.push(new Moon(30, 400, 20, 0.019, 2, ganimedes_texture));
+  ganimedes = moons.push(new Moon(30, 400, 20, 0.019, 2, ganimedes_texture));
   
-  moons.push(new Moon(20, 600, 30, 0.017, 4, calisto_texture));
+  calisto = moons.push(new Moon(20, 600, 30, 0.017, 4, calisto_texture));
+
 
 }
+
 
 function draw() {
   
