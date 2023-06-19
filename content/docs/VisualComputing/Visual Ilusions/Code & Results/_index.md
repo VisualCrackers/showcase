@@ -36,6 +36,13 @@ The code is a web app that uses the device's camera to capture video and detect 
 <img class="image" alt="Color Tracker Showcase" src="https://i.ibb.co/yywpGFJ/Color-Tracker-Showcase.png" title="Color Tracker" width="500"/>
 {{< /tab >}}
 
+{{< tab "Color Histogram" >}}
+## [Histogram](./Histogram)
+This implementation calculates the histogram of an image and displays it in a graph. 
+
+<img class="image" alt="Color Histogram" src="https://i.ibb.co/SyGTVWH/Color-Histogram-Showcase.png" title="Color Histogram" width="500"/>
+{{< /tab >}}
+
 {{< /tabs >}}
 
 <style>
