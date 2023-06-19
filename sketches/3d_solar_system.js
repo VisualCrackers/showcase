@@ -155,13 +155,13 @@ function setup() {
   asteroidBelt = new AsteroidBelt(1250, 2000, 300, color(150), 0.6);
   jupiter = new Planet(14, 2200, 0.00131, 0.06, color('#D39E7B'));
   sun.planets.push(jupiter);
-  saturn = new Planet(12, 3000, 0.0097, 0.07, color('#CAAA67'), 0, PI/8, true, 1.5, 2.5, 0.2,150);
+  saturn = new Planet(12, 3000, 0.00097, 0.07, color('#CAAA67'), 0, PI/8, true, 1.5, 2.5, 0.2,150);
   sun.planets.push(saturn);
-  uranus = new Planet(5, 4000, 0.0068, 0.08, color('#C4EAEE'), 0, PI/2, true, 1.3,1.8, 0.08, 60);
+  uranus = new Planet(5, 4000, 0.00068, 0.08, color('#C4EAEE'), 0, PI/2, true, 1.3,1.8, 0.08, 60);
   sun.planets.push(uranus);
-  neptune = new Planet(4.9, 4500, 0.0054, 0.09, color('#4575FF'), 0, PI/5, true, 1.3,1.5, 0.01, 30);
+  neptune = new Planet(4.9, 4500, 0.00054, 0.09, color('#4575FF'), 0, PI/5, true, 1.3,1.5, 0.01, 30);
   sun.planets.push(neptune);
-  pluto = new Planet(0.4, 5000, 0.0046, 0.1, color('#B5AA9F'), PI/8, 0);
+  pluto = new Planet(0.4, 5000, 0.00046, 0.1, color('#B5AA9F'), PI/8, 0);
   sun.planets.push(pluto);
 
   // Crea el slider para ajustar el tamaño de los planetas
@@ -176,7 +176,7 @@ function setup() {
   sizeLabel.style('color', 'white');
 
   // Crea el slider para ajustar la velocidad de los planetas
-  speedSlider = createSlider(0.1, 10, 1, 0.1);
+  speedSlider = createSlider(0.1, 15, 1, 0.1);
   speedSlider.position(20, 50);
   speedSlider.style('width', '150px');
   speedSlider.input(updateSpeed); // Llama a la función updateSpeed cuando se cambia el valor del slider
