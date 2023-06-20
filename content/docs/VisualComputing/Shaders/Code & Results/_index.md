@@ -22,8 +22,10 @@ This implementation mixes or blends two colors to create a third color. The user
 
 {{< tab "Glitch Board" >}}
 ## [Glitch Board](./Glitch-Board)
+On this one the user is allowed to paint over the canvas and their strokes will be applied a cool glitch effect.
 
-<img class="image" alt="Glitch Board" src="" title="Glitch Board" width="500"/>
+
+<img class="image" alt="Glitch Board" src="https://i.ibb.co/gyjv3tT/glitch2.png" title="Glitch Board" width="500"/>
 {{< /tab >}}
 
 {{< tab "Mosaic" >}}
