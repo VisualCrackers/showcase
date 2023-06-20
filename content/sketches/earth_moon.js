@@ -1,11 +1,43 @@
+let toggleButton;
+let toggleState = false;
+let earth_texture;
+let moon_texture;
+let bg_texture;
+let empty_texture;
+let earth_current_texture;
+let moon_current_texture;
+let bg_current_texture;
+
 function preload() {
-    textura_tierra = loadImage('/showcase/assets/earth_texture.jpg');
-    textura_luna = loadImage('/showcase/assets/moon_texture.jpg');
-    textura_fondo_estrellas = loadImage('/showcase/assets/nocheHD.jpg')
+    earth_texture = loadImage('/showcase/assets/earth_texture.jpg');
+    moon_texture = loadImage('/showcase/assets/moon_texture.jpg');
+    bg_texture = loadImage('/showcase/assets/nocheHD.jpg')
+    empty_texture = loadImage('/showcase/assets/Grey_full.png')
+    // Cargar las texturas currentes
+    earth_current_texture = loadImage('/showcase/assets/earth_texture.jpg');
+    moon_current_texture = loadImage('/showcase/assets/moon_texture.jpg');
+    bg_current_texture = loadImage('/showcase/assets/nocheHD.jpg');
 }
 
 function setup() {
     createCanvas(700, 700, WEBGL);
+    toggleButton = createButton('Toggle texture');
+    toggleButton.position(width - 100, 15);
+    toggleButton.mousePressed(toggleTextures);
+}
+
+function toggleTextures() {
+    toggleState = !toggleState; // Changes the state of the textures
+    
+    if (toggleState) {
+        earth_current_texture = empty_texture;
+        moon_current_texture = empty_texture;
+        bg_current_texture = empty_texture;
+    } else {
+        earth_current_texture = earth_texture;
+        moon_current_texture = moon_texture;
+        bg_current_texture = bg_texture;
+    }
 }
 
 function draw() {
@@ -13,7 +45,7 @@ function draw() {
     
     noStroke() //No dibujar la malla de las esferas
     
-    texture(textura_fondo_estrellas)
+    texture(bg_current_texture)
     sphere(800)
 
     for (let i = 0; i < 3; i++) {
@@ -29,7 +61,7 @@ function draw() {
 
     push()
     rotateY(frameCount * 0.01); //rotación de la tierra sobre su propio eje
-    texture(textura_tierra); 
+    texture(earth_current_texture); 
     sphere(100);
     pop()
 
@@ -37,7 +69,7 @@ function draw() {
     rotateY(-frameCount * 0.05 / 10);//Traslación de la luna al rededor de la tierra
     translate(0, 0, 170)//Distancia del centro de la luna al centro de la tierra
     rotateY(-frameCount * 0.0002);//Rotación del la luna sobre su propio eje
-    texture(textura_luna);
+    texture(moon_current_texture);
     sphere(25);
     pop()
 }
