@@ -136,3 +136,9 @@ Finally, this is the result applying the shader to a rectangle that occupies all
 - Usually thinking in what you want to do with just one pixel is usefull to understand better which is the best way to create the modifications that you are trying to do.
 
 - Debugging and error handling is dificult. Do not stress when something is not working how you expected, keep things easy and be sure to follow correctly the data flow. *(Are you using float numbers?)*
+
+# **References**
+- Ferriss, A. (n.d.). p5.js shaders. P5.js shaders. https://itp-xstory.github.io/p5js-shaders/#/ 
+- Gonzalez Vivo, P. (2015). The book of shaders. The Book of Shaders. https://thebookofshaders.com/ 
+- Tukalo, A. (2022, July 28). Introduction to shaders. LightningChart. https://lightningchart.com/blog/introduction-to-shaders/ 
+- Charalambos, J. P. (n.d.). Introduction. Introduction | Visual Computing. https://visualcomputing.github.io/ 
