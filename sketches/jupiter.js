@@ -1,11 +1,11 @@
 // Variables globales
-let jupyter;
+let jupiter;
 let moons = [];
 let selectedMoon = null;
 
 function preload() {
 
-  jupyter_texture = loadImage('/showcase/assets/jupyter_texture.jpeg');
+  jupiter_texture = loadImage('/showcase/assets/jupiter_texture.jpeg');
   io_texture = loadImage('/showcase/assets/io_texture.jpg');
   europa_texture = loadImage('/showcase/assets/europa_texture.jpg');
   ganimedes_texture = loadImage('/showcase/assets/ganimedes_texture.jpg');
@@ -33,7 +33,7 @@ function setup() {
   
   
   // Crear jupiter
-  jupyter = new Moon(100, 0, 0, 0.02, 0, jupyter_texture);
+  jupiter = new Moon(100, 0, 0, 0.02, 0, jupiter_texture);
   
   // Crear lunas
 
@@ -73,8 +73,8 @@ function draw() {
   directionalLight(directionalLightValue , directionalLightValue , directionalLightValue, -255, 200, 0);
   
   // Mover y mostrar jupiter
-  jupyter.update();
-  jupyter.show();
+  jupiter.update();
+  jupiter.show();
   
   // Mover y mostrar las lunas
   for (let i = 0; i < moons.length; i++) {
