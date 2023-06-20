@@ -27,9 +27,9 @@ function setup() {
   sizeLabel.style('font-size', '14px');
   sizeLabel.style('color', 'white');
 
-  removeTexturesButton = createButton("Quitar texturas"); // Crear el botón
+/*  removeTexturesButton = createButton("Quitar texturas"); // Crear el botón
   removeTexturesButton.position(500, 20);
-  removeTexturesButton.mousePressed(toggleTextures); // Asignar una función al evento click del botón
+  removeTexturesButton.mousePressed(toggleTextures); // Asignar una función al evento click del botón*/
   
   
   // Crear jupiter

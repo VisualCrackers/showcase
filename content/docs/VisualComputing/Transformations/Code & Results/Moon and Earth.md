@@ -95,6 +95,10 @@ Again, the texture() function is used with the textura_luna image as the argumen
       ">
 </iframe>
 
+
+
+**Full Code**
+
 {{< details title="earth_moon.js" open=false >}}
 {{< highlight js >}}
 
