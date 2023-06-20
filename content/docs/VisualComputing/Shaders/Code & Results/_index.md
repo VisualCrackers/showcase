@@ -37,9 +37,9 @@ This program creates a mosaic, or a recreation of an image using smaller images.
 
 {{< tab "Smart Mosaic" >}}
 ## [Smart Mosaic](./Smart-Mosaic)
-Similar to the previous one, but here the mosaic work with only two images and looks for the best match in every pixel between the two images to recreate the original image.
+Similar to the previous one, but here the mosaic work with only three images and looks for the best match in every pixel between the three images to recreate the original image.
 
-<img class="image" alt="Smart Mosaic" src="https://i.ibb.co/82RcxKv/smartmosaic.png" title="Smart Mosaic" width="500"/>
+<img class="image" alt="Smart Mosaic" src="https://i.ibb.co/CJyScJ5/smartmosaic.png" title="Smart Mosaic" width="500"/>
 {{< /tab >}}
 
 {{< /tabs >}}
