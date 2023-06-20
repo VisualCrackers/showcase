@@ -6,34 +6,6 @@ weight: 2
 
 This model is similar to that of Jupiter and its Galilean moons. Here, we work with rotation because the Earth is tilted at an angle, and we will also use translations and rotations for the movement of the moon
 
-## How does it work?
-
-In this model we do not creat a class for the Earth and Moon, we just doing 
-
-{{< details title="class Star" open=false >}}
-{{< highlight js >}}
-class Star {
-  constructor(radius, color) {
-    this.radius = radius;
-    this.color = color;
-    this.planets = [];
-  }
-  show() {
-    push();
-    noStroke();
-    fill(this.color);
-    sphere(this.radius);
-
-    for (let planet of this.planets) {
-      rotateX(planet.orbitTilt)
-      planet.show();
-      planet.update();
-    }
-    pop();
-  }
-}
-{{< /highlight >}}
-{{< /details >}}
 
 **Texturing**
 
