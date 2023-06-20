@@ -20,8 +20,6 @@ float luma(vec4 texel) {
   return 0.299 * texel.r + 0.587 * texel.g + 0.114 * texel.b;
 }
 
-
-
 float getCloser(vec4 texel, vec2 coord){
   //Function to find the closer luma image to the original
   
