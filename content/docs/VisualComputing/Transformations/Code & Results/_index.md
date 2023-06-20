@@ -28,20 +28,12 @@ This model uses the 3D transformations to create a 3D solar system. It also adds
 <img class="image" alt="3D solar system" src="https://i.ibb.co/ZTj5hsS/3dSS.png" title="3D solar system" width="500"/>
 {{< /tab >}}
 
-{{< tab "Jupyter and its moons" >}}
-## [Jupyter and its moons](./Jupyter-and-its-moons)
+{{< tab "Jupiter and its moons" >}}
+## [Jupiter and its moons](./Jupyter-and-its-moons)
 
 This model provides a better depiction of Jupiter's Galilean moons. By using lighting tools, we can add more realism and detail to this model, which recreates the largest and most studied moons of Jupiter.
 
 <img class="image" alt="3D solar system" src='/showcase/assets/jupyter_model.jpg' title="jupyter and its moons" width="500"/>
-{{< /tab >}}
-
-{{< tab "Earth and Moon" >}}
-## [Earth and Moon](./Earth-and-Moon)
-
-This model faithfully recreates the rotations and translations of the Earth and the Moon. Using 3D transformations, we can create this simple yet beautiful model of the Earth and the Moon.
-
-<img class="image" alt="3D solar system" src='/showcase/assets/earth_model.jpg' title="jupyter and its moons" width="500"/>
 {{< /tab >}}
 
 {{< /tabs >}}
