@@ -32,7 +32,7 @@ On this one the user is allowed to paint over the canvas and their strokes will 
 ## [Mosaic](./Mosaic)
 This program creates a mosaic, or a recreation of an image using smaller images. The user can select the size of the mosaic and toggle to the UV visualization.
 
-<img class="image" alt="Mosaic Showcase" src="https://i.ibb.co/ZLWsF0n/mosaic.png" title="Mosaic" width="500"/>
+<img class="image" alt="Mosaic Showcase" src="https://i.ibb.co/qR03FqR/Mosaic.png" title="Mosaic" width="500"/>
 {{< /tab >}}
 
 {{< tab "Smart Mosaic" >}}
