@@ -47,7 +47,7 @@ y' = x * sin(theta) + y * cos(theta)
 ```
 In 3D, rotations can be performed around a specific axis, such as the x, y, or z axis. 3x3 rotation matrices or quaternions are used to perform rotations in three-dimensional space.
 
-### **Lighting**
+## **Lighting**
 
 Lighting plays a crucial role in the visual perception of objects in a 3D environment. By manipulating light properties such as direction, intensity, and color, we can simulate different lighting conditions and add realism to our creations.
 
@@ -65,7 +65,7 @@ Point light simulates a light source that radiates light uniformly in all direct
 4. **Spot Light:**
 Spot light represents a cone-shaped light source that illuminates objects within a defined cone angle. It has a position, direction, and a narrow beam of light. The intensity of the spot light decreases as objects move away from the cone's center. The spotLight() function in p5.js enables you to set the position, direction, cone angle, and other parameters for the spot light.
 
-### **Transformation Trees**
+## **Transformation Trees**
 
 Transformation trees are hierarchical structures used to manage multiple transformations efficiently. They enable the combination and application of transformations in a specific order, resulting in more complex visual effects.
 

@@ -9,6 +9,38 @@ In this sections, we'll present the main and more interesting results of the dif
 
 ## Snippets
 
+Each snippet has a unique funcionality, here we'll present a brief description of each one of them.
+
+{{< tabs "uniqueid" >}}
+
+{{< tab "Color Blender" >}}
+## [Color Blender](./Color-Blender)
+This implementation mixes or blends two colors to create a third color. The user can select the two colors and the blending effect to be applied.
+
+<img class="image" alt="Color Blender" src="https://i.ibb.co/ysM1yC5/colorblending.png" title="Color Blender" width="500"/>
+{{< /tab >}}
+
+{{< tab "Glitch Board" >}}
+## [Glitch Board](./Glitch-Board)
+
+<img class="image" alt="Glitch Board" src="" title="Glitch Board" width="500"/>
+{{< /tab >}}
+
+{{< tab "Mosaic" >}}
+## [Mosaic](./Mosaic)
+This program creates a mosaic, or a recreation of an image using smaller images. The user can select the size of the mosaic and toggle to the UV visualization.
+
+<img class="image" alt="Mosaic Showcase" src="https://i.ibb.co/ZLWsF0n/mosaic.png" title="Mosaic" width="500"/>
+{{< /tab >}}
+
+{{< tab "Smart Mosaic" >}}
+## [Smart Mosaic](./Smart-Mosaic)
+Similar to the previous one, but here the mosaic work with only two images and looks for the best match in every pixel between the two images to recreate the original image.
+
+<img class="image" alt="Smart Mosaic" src="https://i.ibb.co/82RcxKv/smartmosaic.png" title="Smart Mosaic" width="500"/>
+{{< /tab >}}
+
+{{< /tabs >}}
 
 <style>
     .image {
