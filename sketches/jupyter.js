@@ -16,7 +16,21 @@ function preload() {
 
 function setup() {
   createCanvas(700, 700, WEBGL);
-  camera(0, -300, 1000, 0, 0, 0, 0, 1, 0);
+  camera(900, -300, 500, 0, 0, 0, 0, 1, 0);
+
+  
+  directionalLightSlider = createSlider(0, 255, 200); // Slider para ajustar la luz direccional
+  directionalLightSlider.position(20, 20);
+
+  sizeLabel = createP('Lightning level');
+  sizeLabel.position(175, 10);
+  sizeLabel.style('font-size', '14px');
+  sizeLabel.style('color', 'white');
+
+  removeTexturesButton = createButton("Quitar texturas"); // Crear el botón
+  removeTexturesButton.position(500, 20);
+  removeTexturesButton.mousePressed(toggleTextures); // Asignar una función al evento click del botón
+  
   
   // Crear jupiter
   jupyter = new Moon(100, 0, 0, 0.02, 0, jupyter_texture);
@@ -36,22 +50,27 @@ function setup() {
 
 }
 
+function toggleTextures() {
+  texturesEnabled = !texturesEnabled; // Cambiar el estado de las texturas
+}
 
 function draw() {
   
   background('black');
-  orbitControl();
+  //orbitControl();
   texture(bgTexture);
   sphere(2000);
   noStroke();
   rotateZ(-0.3)
-  
-  for (let i = 0; i < 3; i++) {
-      directionalLight(
-            255, 255, 255 - i * 25,//Color
-            -1, 1, -1 //Dirección
-      );
-  }
+  lights();
+
+  let ambientLightColor = color(100); // Color and intensity level of the ambient light
+  ambientLight(ambientLightColor);
+
+ 
+  let directionalLightValue = directionalLightSlider.value();
+
+  directionalLight(directionalLightValue , directionalLightValue , directionalLightValue, -255, 200, 0);
   
   // Mover y mostrar jupiter
   jupyter.update();
