@@ -2,67 +2,19 @@
 weight: 2
 ---
 
-# **Jupyter and its moons**
+# **Jupiter and its moons**
 
-Once we have the 3D models of the solar system, we can further enhance the level of detail for specific planets, such as Jupiter and its Galilean moons. These models can be created using specialized 3D modeling software that allows for intricate design and customization.
+Once we have the 3D models of the solar system, we can further enhance the level of detail for specific planets, such as Jupiter and its Galilean moons. To make the models more realistic, we employ techniques such as lighting and textures. Lighting plays a crucial role in creating a lifelike appearance. By simulating different light sources, shadows, and reflections, we can bring depth and realism to the scene. This can include effects like sunlight casting shadows on the planet's surface or the moons orbiting around Jupiter.
 
-To make the models more realistic, we employ advanced techniques such as lighting and textures. Lighting plays a crucial role in creating a lifelike appearance. By simulating different light sources, shadows, and reflections, we can bring depth and realism to the scene. This can include effects like sunlight casting shadows on the planet's surface or the moons orbiting around Jupiter.
-
-In addition to lighting, textures are used to add surface characteristics to the models. By applying detailed textures, we can depict the specific features of each planet and its moons. For example, Jupiter's turbulent atmosphere, characterized by its distinct cloud bands and the iconic Great Red Spot, can be accurately represented through textures.
+In addition to lighting, textures are used to add surface characteristics to the models. By applying detailed textures, we can depict the specific features of each planet and its moons.
 
 To provide interactivity, we can implement user controls that allow for adjusting the level of illumination. Users can manipulate settings such as the intensity and direction of light sources, enabling them to experiment with different lighting conditions. This interactive feature enhances the user's experience and provides a more engaging exploration of the model.
 
-By combining advanced lighting techniques, high-quality textures, and interactive elements, we can create visually stunning and accurate 3D models of planets like Jupiter and its Galilean moons, bringing the wonders of our solar system to life in a realistic and captivating way.
-
 ## How does it work?
 
-We will create a class to manage the moons and their atributes, which is called `Moon`, where we can change values as distance, speed of rotation, translation and his own texture. We defined as follows:
-
-
-```js
-
-class Moon {
-  constructor(radius, distance, distanceY, speed, angle, textura) {
-    this.radius = radius;
-    this.distance = distance;
-    this.distanceY = distanceY;
-    this.speed = speed;
-    this.angle = angle;
-    this.textura = textura;
-    this.orbitAngle = 0;
-  }
-}
-
-update() {
-    this.angle -= this.speed;
-    this.orbitAngle += this.speed;
-  }
-
-  show() {
-    push();
-    rotateY(frameCount * 0.01);
-    translate(this.distance * cos(this.orbitAngle), this.distanceY, this.distance * sin(this.orbitAngle));
-    rotateY(this.angle);
-    texture(this.textura);
-    sphere(this.radius);
-    pop();
-  }
-
-```
+AS with the previous model, we will create a class to manage the moons and their atributes, which is called `Moon`, where we can change values as distance, speed of rotation, translation and his own texture. We defined as follows:
 
 The class `Moon` represents a moon in the system of moons of Jupiter. It has properties such as the radius, distance from Jupiter, rotation speed, and the texture of the moon. Additionally, it has methods like "show()" to display the moon in the scene.
-
-The `show()` method is a function in the "Moon" class that is responsible for displaying the moon in the scene. Here's a detailed explanation of each component and what they do:
-
-`push()` and `pop()`: These functions are used to save and restore the current transformation matrix configuration. Using push() saves the current configuration, and pop() restores the previous configuration. This prevents transformations from affecting other objects in the scene.
-
-The `translate()` function moves the current drawing position to where the moon will be drawn. The first argument this.distanceFromJupiter indicates the distance from Jupiter along the X-axis. By setting the Y and Z axes to zero, the moon remains in the same relative position to Jupiter along those axes.
-
-The `rotateY()` function rotates the moon around its own axis in 3D space. The argument frameCount * this.rotationSpeed controls the amount of rotation based on the elapsed time in the program. Multiplying by this.rotationSpeed allows adjusting the rotation speed of the moon.
-
-The `texture()` function applies the moon's texture to the spherical object that will be drawn. The argument this.texture refers to the specific texture assigned to the moon in the texture property.
-
-The `sphere()` function draws a sphere with the specified radius in the this.radius argument. This creates the 3D shape of the moon.
 
 **Lightning**
 
@@ -70,7 +22,7 @@ The lighting in the model is achieved using two types of lights: ambient light `
 
 Here's an explanation of how the lighting works in the model:
 
-Ambient Light: Ambient light is considered the general light that exists in the environment and is reflected by all objects. In the model, an ambient light is created in the setup() function using the ambientLight() function.
+**Ambient Light:** Ambient light is considered the general light that exists in the environment and is reflected by all objects. In the model, an ambient light is created in the setup() function using the ambientLight() function.
 
 
 {{< details title="ambientLight()" open=false >}}
@@ -84,8 +36,7 @@ ambientLight(ambientLightColor);
 
 The ambientLightColor argument represents the color and intensity level of the ambient light. By increasing the numeric value of the color, the intensity of the ambient light is increased, making the objects appear brighter.
 
-Directional light simulates a light source that emits parallel rays in a specific direction. In the model, a directional light is created in the setup() function using the directionalLight() function.
-
+**Directional light** simulates a light source that emits parallel rays in a specific direction. In the model, a directional light is created in the setup() function using the directionalLight() function.
 
 
 {{< details title="directionalLight()" open=false >}}
@@ -112,7 +63,7 @@ By adjusting the colors and intensity levels of the ambient and directional ligh
           <head>
             <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
             <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
-            <script src=/showcase/sketches/jupyter.js>
+            <script src=/showcase/sketches/jupiter.js>
             </script>
           </head>
           <body>
@@ -123,17 +74,17 @@ By adjusting the colors and intensity levels of the ambient and directional ligh
 
 **Full Code**
 
-{{< details title="jupyter.js" open=false >}}
+{{< details title="jupiter.js" open=false >}}
 {{< highlight js >}}
 
 // Variables globales
-let jupyter;
+let jupiter;
 let moons = [];
 let selectedMoon = null;
 
 function preload() {
 
-  jupyter_texture = loadImage('/showcase/assets/jupyter_texture.jpeg');
+  jupiter_texture = loadImage('/showcase/assets/jupiter_texture.jpeg');
   io_texture = loadImage('/showcase/assets/io_texture.jpg');
   europa_texture = loadImage('/showcase/assets/europa_texture.jpg');
   ganimedes_texture = loadImage('/showcase/assets/ganimedes_texture.jpg');
@@ -161,7 +112,7 @@ function setup() {
   
   
   // Crear jupiter
-  jupyter = new Moon(100, 0, 0, 0.02, 0, jupyter_texture);
+  jupiter = new Moon(100, 0, 0, 0.02, 0, jupiter_texture);
   
   // Crear lunas
 
@@ -201,8 +152,8 @@ function draw() {
   directionalLight(directionalLightValue , directionalLightValue , directionalLightValue, -255, 200, 0);
   
   // Mover y mostrar jupiter
-  jupyter.update();
-  jupyter.show();
+  jupiter.update();
+  jupiter.show();
   
   // Mover y mostrar las lunas
   for (let i = 0; i < moons.length; i++) {
