@@ -18,8 +18,8 @@ By combining advanced lighting techniques, high-quality textures, and interactiv
 
 We will create a class to manage the moons and their atributes, which is called `Moon`, where we can change values as distance, speed of rotation, translation and his own texture. We defined as follows:
 
-{{< details title="class Moon" open=false >}}
-{{< highlight js >}}
+
+```js
 
 class Moon {
   constructor(radius, distance, distanceY, speed, angle, textura) {
@@ -47,8 +47,8 @@ update() {
     sphere(this.radius);
     pop();
   }
-{{< /highlight >}}
-{{< /details >}}
+
+```
 
 The class `Moon` represents a moon in the system of moons of Jupiter. It has properties such as the radius, distance from Jupiter, rotation speed, and the texture of the moon. Additionally, it has methods like "show()" to display the moon in the scene.
 
