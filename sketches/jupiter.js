@@ -2,6 +2,7 @@
 let jupiter;
 let moons = [];
 let selectedMoon = null;
+let directionalLightAngle = 0;
 
 function preload() {
 
@@ -10,7 +11,6 @@ function preload() {
   europa_texture = loadImage('/showcase/assets/europa_texture.jpg');
   ganimedes_texture = loadImage('/showcase/assets/ganimedes_texture.jpg');
   calisto_texture = loadImage('/showcase/assets/calisto_texture.jpg');
-
   bgTexture = loadImage('/showcase/assets/nocheHD.jpg');
 }
 
@@ -27,27 +27,25 @@ function setup() {
   sizeLabel.style('font-size', '14px');
   sizeLabel.style('color', 'white');
 
-/*  removeTexturesButton = createButton("Quitar texturas"); // Crear el botón
-  removeTexturesButton.position(500, 20);
-  removeTexturesButton.mousePressed(toggleTextures); // Asignar una función al evento click del botón*/
-  
-  
-  // Crear jupiter
-  jupiter = new Moon(100, 0, 0, 0.02, 0, jupiter_texture);
-  
-  // Crear lunas
+  directionalAngleSlider = createSlider(0, TWO_PI, PI, 0.01); // Slider para ajustar la dirección de la luz direccional
+  directionalAngleSlider.position(20, 50);
 
-  let io, europa, ganimedes, calisto;
+  angleLabel = createP('Light direction');
+  angleLabel.position(175, 40);
+  angleLabel.style('font-size', '14px');
+  angleLabel.style('color', 'white');
 
-  io = moons.push(new Moon(15, 200, -60, 0.02, 1, io_texture));
-
-  europa = moons.push(new Moon(10, 300, -20, 0.015, 4,europa_texture));
+ 
   
-  ganimedes = moons.push(new Moon(30, 400, 20, 0.019, 2, ganimedes_texture));
+  // Creates the planet
+  jupiter = new Moon(150, 0, 0, 0.02, 0, 0, jupiter_texture);
   
-  calisto = moons.push(new Moon(20, 600, 30, 0.017, 4, calisto_texture));
+  // Creates the moons 
 
-
+  io = moons.push(new Moon(15, 200, -60, 0.02, 1, PI/8, io_texture));
+  europa = moons.push(new Moon(10, 300, -20, 0.015, 4, PI/2, europa_texture));
+  ganimedes = moons.push(new Moon(30, 400, 20, 0.019, 2, PI, ganimedes_texture));
+  calisto = moons.push(new Moon(20, 500, 30, 0.017, 4, PI/3, calisto_texture));
 }
 
 function toggleTextures() {
@@ -57,7 +55,6 @@ function toggleTextures() {
 function draw() {
   
   background('black');
-  //orbitControl();
   texture(bgTexture);
   sphere(2000);
   noStroke();
@@ -70,27 +67,38 @@ function draw() {
  
   let directionalLightValue = directionalLightSlider.value();
 
-  directionalLight(directionalLightValue , directionalLightValue , directionalLightValue, -255, 200, 0);
+  directionalLightAngle = directionalAngleSlider.value();
+  directionalLight(
+    directionalLightValue,
+    directionalLightValue,
+    directionalLightValue,
+    cos(directionalLightAngle),
+    sin(directionalLightAngle),
+    0
+  );
   
   // Mover y mostrar jupiter
-  jupiter.update();
   jupiter.show();
   
   // Mover y mostrar las lunas
   for (let i = 0; i < moons.length; i++) {
+    push();
+    rotate(50)
     moons[i].update();
     moons[i].show();
+    pop();
   }
 }
 
 class Moon {
-  constructor(radius, distance, distanceY, speed, angle, textura) {
+  constructor(radius, distance, distanceY, speed, angle, tilt, texture) {
     this.radius = radius;
     this.distance = distance;
     this.distanceY = distanceY;
     this.speed = speed;
     this.angle = angle;
-    this.textura = textura;
+    this.tilt = tilt;
+    this.texture = texture;
     this.orbitAngle = 0;
   }
   
@@ -101,11 +109,14 @@ class Moon {
 
   show() {
     push();
-    rotateY(frameCount * 0.01);
-    translate(this.distance * cos(this.orbitAngle), this.distanceY, this.distance * sin(this.orbitAngle));
+    rotateX(this.tilt); // Inclinación de la órbita de la luna
+    push();
     rotateY(this.angle);
-    texture(this.textura);
+    translate(this.distance, 0,0);
+    rotateY(frameCount * this.speed);
+    texture(this.texture);
     sphere(this.radius);
+    pop();
     pop();
   }
 }
