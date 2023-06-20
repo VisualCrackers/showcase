@@ -106,7 +106,7 @@ The opensource library [**Name That Color**](https://chir.ag/projects/ntc/) prov
 The tracking and identification of the colors that are selected will be greatly affected by the lighting in the environment or the quality of the camera.
 {{< /hint>}}
 
-Full code:
+## Full Code
 
 {{< details title="ColorTracker.js" open=false >}}
 {{< highlight js >}}

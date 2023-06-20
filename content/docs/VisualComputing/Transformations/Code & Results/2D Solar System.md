@@ -75,7 +75,7 @@ The resulting sketch is shown below. You can also find the full code in the bott
       ">
 </iframe>
 
-Full code
+## Full Code
 
 {{< details title="2D_solar_system.js" open=false >}}
 {{< highlight js >}}

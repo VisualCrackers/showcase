@@ -161,7 +161,7 @@ The distances and sizes of the planets are not fully to scale (they would be too
 Of course, this is just a simple example of what you can do with the `p5.js` library. You can add more planets, moons, rings, etc. You can also add more features to the planets, like clouds, or even add a spaceship to move around the solar system. The possibilities are endless!
 {{< /hint >}}
 
-Full code:
+## Full Code
 
 {{< details title="3d_solar_system.js" open=false >}}
 {{< highlight js >}}

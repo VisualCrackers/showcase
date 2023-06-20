@@ -93,7 +93,7 @@ For some images, the processing may take time due to the path that is necessary 
 If there are many similar colors, depending on the tolerance value, not all important colors that could be displayed with human perception may be displayed, because the order of image processing causes the colors on top to have a higher priority.
 {{< /hint >}}
 
-Full code:
+## Full Code
 
 {{< details title="Palette.js" open=false >}}
 {{< highlight js >}}

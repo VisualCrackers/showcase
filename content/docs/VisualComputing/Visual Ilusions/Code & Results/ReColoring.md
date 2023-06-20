@@ -128,7 +128,7 @@ Although a color blind palette can be used, it is not guaranteed that the person
 
 {{< /columns >}}
 
-Full code:
+## Full Code
 
 {{< details title="ReColoring.js" open=false >}}
 {{< highlight js >}}

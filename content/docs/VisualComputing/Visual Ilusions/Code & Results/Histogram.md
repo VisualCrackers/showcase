@@ -63,7 +63,7 @@ The final result is the following:
 **Accessibility for Screen Readers:** The program heavily relies on visual elements, which may pose challenges for users who rely on screen readers. To improve accessibility, alternative text descriptions or sonification of the histogram data should be considered.
 {{< /hint >}}
 
-Full code:
+## Full Code
 
 {{< details title="colorHistogram.js" open=false >}}
 {{< highlight js >}}
